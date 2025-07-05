@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/about";
+import About from "./pages/About";
 import BallCatchingProject from "./pages/BallCatchingProject";
 import UkuleleStrapProject from "./pages/UkuleleStrapProject";
 import DiscordAIBot from "./pages/DiscordAIBot";
