@@ -16,10 +16,24 @@ function App() {
           backgroundColor: "#454e53",
         }}
       >
-        <Link to="/" style={{ color: "#cbdae2", textDecoration: "none" }}>
+        <Link
+          to="/"
+          style={{
+        color: "#cbdae2",
+        textDecoration: "none",
+        fontSize: "1.25rem",
+          }}
+        >
           Home
         </Link>
-        <Link to="/about" style={{ color: "#cbdae2", textDecoration: "none" }}>
+        <Link
+          to="/about"
+          style={{
+        color: "#cbdae2",
+        textDecoration: "none",
+        fontSize: "1.25rem",
+          }}
+        >
           About
         </Link>
       </nav>

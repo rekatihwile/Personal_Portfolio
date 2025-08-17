@@ -1,4 +1,24 @@
+import LoopingVideos from "../LoopingVideos";
+
 function BallCatchingProject() {
+
+
+  const BASE = 'videos/Ball_Catching_Project/'         // e.g. "/" locally, or "/my-site/" when deployed
+
+  // 1) Make a dictionary / hashmap from a short name to a file path (string)
+  const videoPaths = {
+    "Ball_On_Stick":        BASE + "IMG_4009.mp4",
+    "Catch_DC":  BASE + "63_Decentralized.mov",
+    "Catch_JSID": BASE + "JointSpaceInverseDynamics.mov",
+    "Catch_OID": BASE + "OperationalInverseDynamics.mov",
+    "Catch_RJS_1": BASE + "RobustJointSpace.mov",
+    "Catch_RJS_2": BASE + "63_RobustJoint.mov",
+    "results":         BASE + "results.mp4"
+  }
+  
+
+
+
   return (
     <div
       style={{
@@ -39,9 +59,8 @@ function BallCatchingProject() {
           </p>
         </div>
         <div style={{ flex: 1 }}>
-          <video
-            src="/videos/overview.mp4"
-            controls
+          <img
+            src="/images/Ball_Catching_Robot/Experimental_Setup.png"
             style={{
               width: "100%",
               borderRadius: "8px",
@@ -64,23 +83,16 @@ function BallCatchingProject() {
         }}
       >
         <div style={{ flex: 1 }}>
-          <video
-            src="/videos/implementation.mp4"
-            controls
-            style={{
-              width: "100%",
-              borderRadius: "8px",
-              backgroundColor: "#666",
-            }}
-          />
+                    <LoopingVideos src={videoPaths.Ball_On_Stick} style={{ width: "100%", maxWidth: "600px" }} />
+
         </div>
         <div style={{ flex: 1 }}>
           <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
             Implementation
           </h2>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.6" }}>
-            The implementation involved designing a 6-DOF robotic arm with servo
-            motors and 3D-printed components. Computer vision algorithms track
+            The implementation involved designing a 2RR planar robotic arm with Dyanmixel M-28
+            motors and 3D-printed linkages and base mounts. Computer vision algorithms track
             the ball using OpenCV, calculating trajectory and velocity in
             real-time. A PID controller optimizes the arm's movement to achieve
             precise positioning. The system processes video at 60fps to ensure
@@ -89,42 +101,73 @@ function BallCatchingProject() {
         </div>
       </div>
 
-      {/* Results Section - Text Left, Video Right */}
+      {/* Results Section - Text Above, Videos Below */}
       <div
         style={{
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
           padding: "2rem",
           gap: "2rem",
-          maxWidth: "1200px",
+          width: "100vw",
+          maxWidth: "100vw",
           margin: "0 auto",
         }}
       >
-        <div style={{ flex: 1 }}>
-          <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>Results</h2>
-          <p style={{ fontSize: "1.1rem", lineHeight: "1.6" }}>
-            The final system achieved an 85% success rate in catching ping pong
-            balls thrown from various angles and speeds. The project
-            demonstrated successful integration of mechanical engineering
-            principles, control theory, and computer vision. Performance
-            improvements were noted when using different control algorithms,
-            with the PID controller showing the best balance between speed and
-            accuracy.
+        <div style={{ width: "100%", maxWidth: "1400px", margin: "0 auto" }}>
+          <h2 style={{ fontSize: "2rem", marginBottom: "1rem", textAlign: "center" }}>Results</h2>
+          <p style={{ fontSize: "1.1rem", lineHeight: "1.6", textAlign: "center" }}>
+        The final system achieved an 85% success rate in catching ping pong
+        balls thrown from various angles and speeds. The project
+        demonstrated successful integration of mechanical engineering
+        principles, control theory, and computer vision. Performance
+        improvements were noted when using different control algorithms,
+        with the PID controller showing the best balance between speed and
+        accuracy.
           </p>
+          <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gridTemplateRows: "repeat(2, 1fr)",
+          gap: "2rem",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "2rem",
+          width: "100%",
+        }}
+          >
+        {/* Catch_DC */}
+        <div style={{ textAlign: "center", width: "100%" }}>
+          <LoopingVideos src={videoPaths.Catch_DC} style={{ width: "100%", maxWidth: "600px" }} />
+          <div style={{ marginTop: "0.5rem", fontSize: "1rem", color: "#cbdae2" }}>
+            Decentralized Control Catch
+          </div>
         </div>
-        <div style={{ flex: 1 }}>
-          <video
-            src="/videos/results.mp4"
-            controls
-            style={{
-              width: "100%",
-              borderRadius: "8px",
-              backgroundColor: "#666",
-            }}
-          />
+        {/* Catch_JSID */}
+        <div style={{ textAlign: "center", width: "100%" }}>
+          <LoopingVideos src={videoPaths.Catch_JSID} style={{ width: "100%", maxWidth: "600px" }} />
+          <div style={{ marginTop: "0.5rem", fontSize: "1rem", color: "#cbdae2" }}>
+            Joint Space Inverse Dynamics Catch
+          </div>
+        </div>
+        {/* Catch_OID */}
+        <div style={{ textAlign: "center", width: "100%" }}>
+          <LoopingVideos src={videoPaths.Catch_OID} style={{ width: "100%", maxWidth: "600px" }} />
+          <div style={{ marginTop: "0.5rem", fontSize: "1rem", color: "#cbdae2" }}>
+            Operational Inverse Dynamics Catch
+          </div>
+        </div>
+        {/* Catch_RJS */}
+        <div style={{ textAlign: "center", width: "100%" }}>
+          <LoopingVideos src={videoPaths.Catch_RJS_2} style={{ width: "100%", maxWidth: "600px" }} />
+          <div style={{ marginTop: "0.5rem", fontSize: "1rem", color: "#cbdae2" }}>
+            Robust Joint Space Catch
+          </div>
+        </div>
+          </div>
         </div>
       </div>
-
       {/* Footer */}
       <footer
         style={{
