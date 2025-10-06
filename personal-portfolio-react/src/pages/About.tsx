@@ -1,43 +1,12 @@
 function About() {
-  return (
-    <div
-      style={{
-        fontFamily:
-          "'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace",
-        padding: "2rem",
-        color: "#cbdae2",
-        backgroundColor: "#454e53",
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
-      <div style={{ flex: 1 }}>
-        <h1>About Me</h1>
-        <p>
-          I&apos;m a UCLA mechanical engineering student who loves robotics.
-        </p>
-      </div>
-
-      {/* Footer */}
-      <footer
-        style={{
-          marginTop: "4rem",
-          padding: "2rem",
-          backgroundColor: "#3a4248",
-          textAlign: "center",
-          color: "#cbdae2",
-        }}
-      >
-        <p style={{ margin: "0.5rem 0", fontSize: "1rem" }}>
-          Email: eli@example.com
-        </p>
-        <p style={{ margin: "0.5rem 0", fontSize: "1rem" }}>
-          UCLA Mechanical Engineering Student
-        </p>
-      </footer>
-    </div>
-  );
+return (
+<div className="mx-auto max-w-3xl px-4 py-12">
+<h1 className="text-3xl font-semibold">About Me</h1>
+<p className="mt-4 text-gray-300 leading-relaxed">I’m a UCLA mechanical engineering student who loves robotics. I enjoy building systems that combine clean mechanical design, robust control, and practical software.</p>
+<p className="mt-4 text-gray-400 text-sm">For opportunities or questions, reach me at <a className="underline decoration-dotted underline-offset-4" href="mailto:eli.p.p.whitaker@gmail.com">eli.p.p.whitaker@gmail.com</a>.</p>
+</div>
+);
 }
+
 
 export default About;
