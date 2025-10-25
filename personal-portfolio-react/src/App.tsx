@@ -4,6 +4,7 @@ import About from "./pages/About";
 import BallCatchingProject from "./pages/BallCatchingProject";
 import UkuleleStrapProject from "./pages/UkuleleStrapProject";
 import DiscordAIBot from "./pages/DiscordAIBot";
+import LaserWeeding from "./pages/ResearchLab";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -21,6 +22,7 @@ return (
 {/* Project routes */}
 <Route path="/projects/ball-catching" element={<BallCatchingProject />} />
 <Route path="/projects/ukulele-strap" element={<UkuleleStrapProject />} />
+<Route path="/projects/ResearchLab" element={<LaserWeeding />} />
 <Route path="/projects/discord-ai-bot" element={<DiscordAIBot />} />
 {/* Back-compat for old links */}
 <Route path="/BallCatchingProject" element={<Navigate to="/projects/ball-catching" replace />} />

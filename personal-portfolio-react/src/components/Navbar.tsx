@@ -29,7 +29,7 @@ return (
 <NavLink to="/" className={linkCls} end>Home</NavLink>
 <NavLink to="/about" className={linkCls}>About</NavLink>
 <NavLink to="/projects/ball-catching" className={linkCls}>Ball Catching</NavLink>
-<NavLink to="/projects/ukulele-strap" className={linkCls}>Ukulele Strap</NavLink>
+<NavLink to="/projects/ResearchLab" className={linkCls}>Laser Weeder</NavLink>
 <NavLink to="/projects/discord-ai-bot" className={linkCls}>Discord AI Bot</NavLink>
 </div>
 
