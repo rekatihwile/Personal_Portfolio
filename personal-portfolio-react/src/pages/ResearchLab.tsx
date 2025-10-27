@@ -2,7 +2,7 @@ import LoopingVideos from '../components/LoopingVideos';
 
 function LaserWeeding() {
   return (
-    <div className="min-h-screen bg-[#171a1c] text-gray-100">
+    <div className="min-h-screen bg-[#121517] text-gray-100">
       {/* Page Header */}
       <div style={{ padding: '2rem', textAlign: 'center' }}>
         <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>Laser Weeding Project</h1>
@@ -63,7 +63,7 @@ function LaserWeeding() {
           maxWidth: '1200px',
           margin: '0 auto',
           flexWrap: 'wrap-reverse',
-          backgroundColor: '#3a4248',
+          backgroundColor: '#121517',
         }}
       >
         <section className="mt-10" style={{ flex: 1, minWidth: '300px' }}>
@@ -101,7 +101,7 @@ function LaserWeeding() {
           maxWidth: '1200px',
           margin: '0 auto',
           flexWrap: 'wrap',
-          backgroundColor: '#3a4248',
+          backgroundColor: '#121517',
         }}
       >
         {/* Left side: text */}
@@ -173,7 +173,7 @@ function LaserWeeding() {
         style={{
           marginTop: '4rem',
           padding: '2rem',
-          backgroundColor: '#3a4248',
+          backgroundColor: '#121517',
           textAlign: 'center',
           color: '#cbdae2',
         }}
