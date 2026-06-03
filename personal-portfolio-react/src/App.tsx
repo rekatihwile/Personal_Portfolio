@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Home from './pages/Home';
 import About from './pages/About';
 import BallCatchingProject from './pages/BallCatchingProject';
+import GroceryBaggerProject from './pages/GroceryBaggerProject';
 import UkuleleStrapProject from './pages/UkuleleStrapProject';
 import LaserWeeding from './pages/ResearchLab';
 import Navbar from './components/Navbar';
@@ -19,6 +20,7 @@ function App() {
             <Route path="/about" element={<About />} />
             {/* Project routes */}
             <Route path="/projects/ball-catching" element={<BallCatchingProject />} />
+            <Route path="/projects/grocery-bagger" element={<GroceryBaggerProject />} />
             <Route path="/projects/ukulele-strap" element={<UkuleleStrapProject />} />
             <Route path="/projects/ResearchLab" element={<LaserWeeding />} />
             {/* Back-compat for old links */}
