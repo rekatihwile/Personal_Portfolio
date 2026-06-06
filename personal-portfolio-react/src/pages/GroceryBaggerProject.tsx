@@ -1,6 +1,7 @@
 import LoopingVideos from '../components/LoopingVideos';
 
 const media = {
+  hero: '/videos/Grocery_Bagger/hero-pick-place-demo.mp4',
   densePack: '/videos/Grocery_Bagger/dense-pack-demo.mp4',
   checkout: '/videos/Grocery_Bagger/grocery-checkout-demo.mp4',
   walkthrough: '/videos/Grocery_Bagger/system-walkthrough.mp4',
@@ -48,8 +49,8 @@ function GroceryBaggerProject() {
 
       <section className="mb-16">
         <LoopingVideos
-          src={media.densePack}
-          text="Dense packing demo showing geometry-based placement decisions based on item size, overlap, and available bag space."
+          src={media.hero}
+          text="Continuous pick-and-place hero demo showing the grocery bagging system operating over an extended sequence."
           className="w-full rounded-xl border border-white/10 object-contain"
         />
       </section>
@@ -64,7 +65,8 @@ function GroceryBaggerProject() {
         </p>
         <p className="mt-4 text-gray-300 leading-relaxed">
           The goal was not to claim a perfectly robust grocery bagger for every environment. It was
-          to connect perception, item handling, and practical placement logic into a real robot demo.
+          to connect perception, item handling, and practical placement logic into a real robot
+          demo.
         </p>
       </section>
 
@@ -72,8 +74,8 @@ function GroceryBaggerProject() {
         <div>
           <h2 className="mb-3 text-2xl font-semibold">Packing Strategy</h2>
           <p className="text-gray-300 leading-relaxed">
-            The packing behavior used explicit geometric reasoning. Each placement had to make
-            sense for the item, the available bag space, and the real manipulator constraints.
+            The packing behavior used explicit geometric reasoning. Each placement had to make sense
+            for the item, the available bag space, and the real manipulator constraints.
           </p>
           <div className="mt-6 space-y-4 text-gray-300">
             {packingPoints.map((point) => (
@@ -110,8 +112,8 @@ function GroceryBaggerProject() {
             Carmex lip balm.
           </p>
           <p className="mt-4 text-gray-300 leading-relaxed">
-            Those recognition outputs still had to be translated into robot-relevant decisions:
-            what to pick, where it could fit, and how the physical bag state might change after the
+            Those recognition outputs still had to be translated into robot-relevant decisions: what
+            to pick, where it could fit, and how the physical bag state might change after the
             placement.
           </p>
         </div>
@@ -143,23 +145,26 @@ function GroceryBaggerProject() {
         </figure>
       </section>
 
-      <section className="mb-20">
-        <h2 className="mb-3 text-2xl font-semibold">Demo Gallery</h2>
+      <section className="mb-12">
+        <h2 className="mb-3 text-2xl font-semibold">Walkthrough Video</h2>
         <p className="mb-8 max-w-2xl text-gray-400">
-          Additional clips showing the standard checkout-style demo and the project walkthrough.
+          Short project walkthrough with slides and final bagging footage.
         </p>
-        <div className="grid gap-8 lg:grid-cols-2">
-          <LoopingVideos
-            src={media.checkout}
-            text="Standard checkout-style demo showing the robot placing grocery items into the bag."
-            className="w-full rounded-xl border border-white/10 object-contain"
-          />
-          <LoopingVideos
-            src={media.walkthrough}
-            text="Short project walkthrough with slides and final bagging footage."
-            className="w-full rounded-xl border border-white/10 object-contain"
-          />
-        </div>
+        <LoopingVideos
+          src={media.walkthrough}
+          className="w-full rounded-xl border border-white/10 object-contain"
+        />
+      </section>
+
+      <section className="mb-20 pt-6">
+        <h2 className="mb-3 text-2xl font-semibold">Grocery Checkout</h2>
+        <p className="mb-8 max-w-2xl text-gray-400">
+          Standard checkout-style demo showing the robot placing grocery items into the bag.
+        </p>
+        <LoopingVideos
+          src={media.checkout}
+          className="w-full rounded-xl border border-white/10 object-contain"
+        />
       </section>
 
       <section className="mb-16 grid gap-12 md:grid-cols-2">

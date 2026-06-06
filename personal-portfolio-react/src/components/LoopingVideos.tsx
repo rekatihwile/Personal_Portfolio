@@ -4,9 +4,10 @@ type LoopingVideoProps = {
   src: string;
   text?: string;
   className?: string;
+  poster?: string;
 };
 
-export default function LoopingVideos({ src, text, className }: LoopingVideoProps) {
+export default function LoopingVideos({ src, text, className, poster }: LoopingVideoProps) {
   const [controls, setControls] = useState(false);
 
   return (
@@ -20,13 +21,14 @@ export default function LoopingVideos({ src, text, className }: LoopingVideoProp
     >
       <video
         src={src}
+        poster={poster}
         autoPlay
         loop
         muted
         playsInline
         controls={controls}
         preload="metadata"
-        className={`bg-[#15191c] shadow-[0_18px_70px_rgba(0,0,0,0.24)] ${className || ''}`}
+        className={`w-full bg-[#15191c] shadow-[0_18px_70px_rgba(0,0,0,0.24)] ${className || ''}`}
       />
       {text && <div className="mt-3 text-sm leading-relaxed text-gray-400">{text}</div>}
     </div>

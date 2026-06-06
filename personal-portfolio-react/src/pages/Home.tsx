@@ -17,7 +17,7 @@ const projects = [
   },
   {
     to: '/projects/laser-weeder',
-    img: '/images/Laser_Weeder/ucla-laser-weeder-system.jpg',
+    img: '/images/Laser_Weeder/ucla-laser-weeder-system-hq.jpg',
     alt: 'Laser weeder robotic treatment system in a UCLA research context',
     title: 'Laser Weeder Robotic Treatment System',
     desc: 'Robotic laser weed treatment system using staged control, target re-identification, and timed firing in a UCLA lab context.',

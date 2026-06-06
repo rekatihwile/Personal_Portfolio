@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 const navLinks = [
   { to: '/', label: 'Home', end: true },
   { to: '/about', label: 'About' },
-  { to: '/projects/ball-catching', label: 'Ball Catching' },
-  { to: '/projects/laser-weeder', label: 'Laser Weeder' },
-  { to: '/projects/ukulele-strap', label: 'Ukulele Strap' },
   { to: '/projects/grocery-bagger', label: 'Grocery Bagger' },
+  { to: '/projects/laser-weeder', label: 'Laser Weeder' },
+  { to: '/projects/ball-catching', label: 'Ball Catching' },
+  { to: '/projects/ukulele-strap', label: 'Ukulele Strap' },
 ];
 
 export default function Navbar() {
