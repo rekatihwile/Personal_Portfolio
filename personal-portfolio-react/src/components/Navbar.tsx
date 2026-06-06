@@ -5,7 +5,7 @@ const navLinks = [
   { to: '/', label: 'Home', end: true },
   { to: '/about', label: 'About' },
   { to: '/projects/ball-catching', label: 'Ball Catching' },
-  { to: '/projects/ResearchLab', label: 'Laser Weeder' },
+  { to: '/projects/laser-weeder', label: 'Laser Weeder' },
   { to: '/projects/ukulele-strap', label: 'Ukulele Strap' },
   { to: '/projects/grocery-bagger', label: 'Grocery Bagger' },
 ];
@@ -14,8 +14,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const base =
-    'px-3 py-2 rounded-md text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-[#171a1c]';
-  const active = 'bg-indigo-600/20 text-white';
+    'px-2.5 py-2 rounded-md text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-[#171a1c]';
+  const active = 'bg-white/10 text-white';
   const inactive = 'text-gray-300 hover:text-white hover:bg-white/5';
   const linkCls = ({ isActive }: { isActive: boolean }) =>
     `${base} ${isActive ? active : inactive}`;
@@ -34,7 +34,7 @@ export default function Navbar() {
           </NavLink>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-1 flex-wrap justify-end">
+          <div className="hidden md:flex items-center gap-2 flex-wrap justify-end">
             {navLinks.map(({ to, label, end }) => (
               <NavLink key={to} to={to} className={linkCls} end={end}>
                 {label}

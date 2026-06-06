@@ -22,7 +22,11 @@ function App() {
             <Route path="/projects/ball-catching" element={<BallCatchingProject />} />
             <Route path="/projects/grocery-bagger" element={<GroceryBaggerProject />} />
             <Route path="/projects/ukulele-strap" element={<UkuleleStrapProject />} />
-            <Route path="/projects/ResearchLab" element={<LaserWeeding />} />
+            <Route path="/projects/laser-weeder" element={<LaserWeeding />} />
+            <Route
+              path="/projects/ResearchLab"
+              element={<Navigate to="/projects/laser-weeder" replace />}
+            />
             {/* Back-compat for old links */}
             <Route
               path="/BallCatchingProject"

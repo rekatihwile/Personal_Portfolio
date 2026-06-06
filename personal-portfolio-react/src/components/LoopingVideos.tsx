@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 type LoopingVideoProps = {
   src: string;
   text?: string;
@@ -5,10 +7,16 @@ type LoopingVideoProps = {
 };
 
 export default function LoopingVideos({ src, text, className }: LoopingVideoProps) {
+  const [controls, setControls] = useState(false);
+
   return (
     <div
-      className="hover:brightness-110 hover:scale-102 text-sm hover:text-lg
-         transition-all ease-in "
+      className="group text-sm"
+      onMouseEnter={() => setControls(true)}
+      onMouseLeave={() => setControls(false)}
+      onFocus={() => setControls(true)}
+      onBlur={() => setControls(false)}
+      onClick={() => setControls(true)}
     >
       <video
         src={src}
@@ -16,9 +24,11 @@ export default function LoopingVideos({ src, text, className }: LoopingVideoProp
         loop
         muted
         playsInline
-        className={`rounded-lg bg-gray-600  ${className || ''}`}
+        controls={controls}
+        preload="metadata"
+        className={`bg-[#15191c] shadow-[0_18px_70px_rgba(0,0,0,0.24)] ${className || ''}`}
       />
-      <div className="mt-2 text-gray-300">{text}</div>
+      {text && <div className="mt-3 text-sm leading-relaxed text-gray-400">{text}</div>}
     </div>
   );
 }

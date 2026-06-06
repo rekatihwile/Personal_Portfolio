@@ -16,12 +16,13 @@ function BallCatchingProject() {
       {/* ── Hero ──────────────────────────────────────── */}
       <header className="mb-12">
         <p className="text-sm font-medium uppercase tracking-widest text-gray-500 mb-2">
-          MAE 189 — Robotics
+          MAE C163C — Robotics
         </p>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Ball Catching Project</h1>
         <p className="mt-3 text-lg text-gray-400 max-w-2xl leading-relaxed">
           Computer vision + 2-DOF planar arm intercepting ping-pong trajectories across four
-          controller variants.
+          controller variants, built in the final course of the MAE C163A/B/C robotics elective
+          sequence.
         </p>
       </header>
 

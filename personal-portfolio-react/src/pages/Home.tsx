@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 const projects = [
   {
     to: '/projects/grocery-bagger',
-    img: '/images/Grocery_Bagger/final_setup.png',
-    alt: 'Automated grocery bagger final setup',
-    title: 'Automated Grocery Bagger',
-    desc: 'End-to-end SCARA-like grocery packing robot using YOLO segmentation, RAFT-Stereo point clouds, robot-frame calibration, and deterministic AABB packing.',
+    img: '/images/Grocery_Bagger/yolo-training-scene.jpg',
+    alt: 'Grocery item recognition scene for the autonomous bagging robot',
+    title: 'Autonomous Grocery Bagging Robot',
+    desc: 'Physical robot demo for autonomous grocery packing using item recognition and deterministic geometry-based packing heuristics.',
   },
   {
     to: '/projects/ball-catching',
@@ -16,11 +16,11 @@ const projects = [
     desc: 'Computer vision + 2-DOF planar arm intercepting ping-pong trajectories across four controller variants.',
   },
   {
-    to: '/projects/ResearchLab',
-    img: '/images/Research_Lab/CAD_Setup.png',
-    alt: 'Laser Weeding Research',
-    title: 'Laser Weeding Research',
-    desc: 'Stereo vision, learned keypoint localization, and closed-loop gantry control for autonomous precision weed ablation.',
+    to: '/projects/laser-weeder',
+    img: '/images/Laser_Weeder/ucla-laser-weeder-system.jpg',
+    alt: 'Laser weeder robotic treatment system in a UCLA research context',
+    title: 'Laser Weeder Robotic Treatment System',
+    desc: 'Robotic laser weed treatment system using staged control, target re-identification, and timed firing in a UCLA lab context.',
   },
   {
     to: '/projects/ukulele-strap',
@@ -60,12 +60,12 @@ function Home() {
             <Link
               key={to}
               to={to}
-              className="group rounded-xl border border-white/10 bg-[#0f1213] hover:bg-white/[0.04] p-4 transition flex flex-col"
+              className="group rounded-lg border border-white/10 bg-[#0f1213] hover:bg-white/[0.04] p-4 transition flex flex-col"
             >
               <img
                 src={img}
                 alt={alt}
-                className="w-full h-36 object-contain rounded-lg border border-white/10 bg-[#121517]"
+                className="w-full h-48 object-cover rounded-md border border-white/10 bg-[#121517]"
               />
               <h3 className="mt-3 text-base font-medium text-white">{title}</h3>
               <p className="mt-1 text-sm text-gray-400 leading-relaxed">{desc}</p>
