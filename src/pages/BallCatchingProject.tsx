@@ -85,8 +85,10 @@ function BallCatchingProject() {
         <div className="flex items-center justify-center">
           <LoopingVideos
             src={BASE + 'IMG_4009.mp4'}
+            portrait
+            size="sm"
             text="End-effector tracking test"
-            className="max-h-[520px] rounded-xl"
+            className="rounded-xl"
           />
         </div>
       </section>
@@ -99,7 +101,7 @@ function BallCatchingProject() {
         </p>
         <div className="grid gap-8 sm:grid-cols-2">
           {videos.map(({ src, label }) => (
-            <LoopingVideos key={src} src={src} text={label} className="w-full rounded-xl" />
+            <LoopingVideos key={src} src={src} size="full" text={label} className="rounded-xl" />
           ))}
         </div>
       </section>

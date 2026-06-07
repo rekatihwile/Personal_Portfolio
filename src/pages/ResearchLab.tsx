@@ -84,8 +84,9 @@ function LaserWeeding() {
         <LoopingVideos
           src={media.control}
           poster={media.controlPoster}
+          size="lg"
           text="Timeline overlay showing staged control behavior: PD control, transit, target re-identification, final alignment, and firing."
-          className="w-full rounded-xl border border-white/10"
+          className="rounded-xl border border-white/10"
         />
         <div className="mt-10 grid gap-5 lg:grid-cols-2 lg:gap-x-12 lg:gap-y-6">
           {controlStages.map((stage) => (
@@ -118,7 +119,8 @@ function LaserWeeding() {
           src={media.demo}
           poster={media.demoPoster}
           text="Controlled demo showing 16/16 successful weed treatments in favorable conditions, with phone POV and external POV."
-          className="w-full rounded-xl border border-white/10"
+          size="full"
+          className="rounded-xl border border-white/10"
         />
       </section>
 

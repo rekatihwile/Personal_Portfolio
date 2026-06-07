@@ -50,8 +50,9 @@ function GroceryBaggerProject() {
       <section className="mb-24 md:mb-28">
         <LoopingVideos
           src={media.hero}
+          size="lg"
           text="Continuous pick-and-place hero demo showing the grocery bagging system operating over an extended sequence."
-          className="w-full rounded-xl border border-white/10 object-contain"
+          className="rounded-xl border border-white/10"
         />
       </section>
 
@@ -87,8 +88,9 @@ function GroceryBaggerProject() {
         </div>
         <LoopingVideos
           src={media.densePack}
+          size="full"
           text="The planner prioritized practical fit and placement constraints rather than treating bagging as a purely visual layout problem."
-          className="w-full rounded-xl border border-white/10 object-contain"
+          className="rounded-xl border border-white/10"
         />
       </section>
 
@@ -152,7 +154,8 @@ function GroceryBaggerProject() {
         </p>
         <LoopingVideos
           src={media.walkthrough}
-          className="w-full rounded-xl border border-white/10 object-contain"
+          size="lg"
+          className="rounded-xl border border-white/10"
         />
       </section>
 
@@ -163,7 +166,8 @@ function GroceryBaggerProject() {
         </p>
         <LoopingVideos
           src={media.checkout}
-          className="w-full rounded-xl border border-white/10 object-contain"
+          size="lg"
+          className="rounded-xl border border-white/10"
         />
       </section>
 
