@@ -2,11 +2,11 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-APP_DIR="$ROOT_DIR/personal-portfolio-react"
+APP_DIR="$ROOT_DIR"
 VENV_DIR="$ROOT_DIR/.venv"
 
-if [[ ! -d "$APP_DIR" ]]; then
-  echo "Error: expected app directory at $APP_DIR"
+if [[ ! -f "$APP_DIR/package.json" ]]; then
+  echo "Error: expected app files at $APP_DIR"
   exit 1
 fi
 

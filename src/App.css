@@ -1,0 +1,9 @@
+/* ── Root container ─────────────────────────────────────────────────────────
+   max-width constrains the very widest layouts; individual pages apply their
+   own max-w-6xl / px-4 containers for content width.
+   text-align is intentionally NOT set here — pages control their own alignment.
+───────────────────────────────────────────────────────────────────────────── */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

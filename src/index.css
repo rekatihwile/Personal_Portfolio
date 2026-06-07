@@ -1,0 +1,441 @@
+@import "tailwindcss";
+
+/* ── Global design tokens ───────────────────────────── */
+:root {
+  /* Sans-serif for all UI text */
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+    Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #121517;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Shared page spacing. Tune these values to adjust every project page. */
+  --page-max-width: 72rem;
+  --page-pad-left: 1.25rem;
+  --page-pad-right: 1.25rem;
+  --page-pad-top: 5rem;
+  --page-pad-bottom: 6rem;
+  --header-gap: 5rem;
+  --section-gap: 6rem;
+  --column-gap: 3rem;
+  --row-gap: 3rem;
+  --text-gap: 1.25rem;
+  --heading-gap: 1.25rem;
+  --content-line-height: 1.75;
+}
+
+/* ── Box model reset ────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Body ───────────────────────────────────────────── */
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+    Arial, sans-serif;
+  background-color: #121517;
+  color: rgba(255, 255, 255, 0.87);
+  min-width: 320px;
+  /* prevent any child from causing horizontal scroll */
+  overflow-x: hidden;
+}
+
+/* Shared text rhythm used by every routed page. */
+.site-text {
+  font-family: inherit;
+  line-height: var(--content-line-height);
+}
+
+.site-text p,
+.site-text li {
+  line-height: var(--content-line-height);
+}
+
+.site-text p + p {
+  margin-top: var(--text-gap);
+}
+
+.site-text h1,
+.site-text h2,
+.site-text h3 {
+  text-wrap: balance;
+}
+
+.site-text h1 + p,
+.site-text h2 + p,
+.site-text h3 + p {
+  margin-top: var(--heading-gap);
+}
+
+/* Shared project layout. These rules intentionally provide spacing without
+   relying on Tailwind margin utilities, so the reset cannot collapse pages. */
+.project-page {
+  width: min(100%, var(--page-max-width));
+  margin-inline: auto;
+  padding-top: var(--page-pad-top);
+  padding-right: var(--page-pad-right);
+  padding-bottom: var(--page-pad-bottom);
+  padding-left: var(--page-pad-left);
+}
+
+.project-page-narrow {
+  --page-max-width: 48rem;
+}
+
+.project-page > header {
+  margin-bottom: var(--header-gap);
+}
+
+.project-page > section {
+  margin-bottom: var(--section-gap);
+}
+
+.project-page > section:last-child {
+  margin-bottom: 0;
+}
+
+.project-page section.grid {
+  column-gap: var(--column-gap);
+  row-gap: var(--row-gap);
+}
+
+.project-page section > div > h2,
+.project-page section > h2 {
+  margin-bottom: var(--heading-gap);
+}
+
+.project-page figure > figcaption,
+.project-page video + div {
+  margin-top: 1rem;
+}
+
+.project-page ul,
+.project-page [class*="space-y-"] {
+  row-gap: var(--text-gap);
+}
+
+.page-shell {
+  width: min(100%, var(--page-max-width));
+  margin-inline: auto;
+  padding-left: var(--page-pad-left);
+  padding-right: var(--page-pad-right);
+}
+
+.home-page {
+  width: 100%;
+}
+
+.home-hero {
+  width: 100%;
+  background-image: linear-gradient(to bottom, #1e2427, #171a1c);
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.home-hero-shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-projects {
+  padding-top: 3.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.project-card {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 40rem) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --page-pad-left: 2rem;
+    --page-pad-right: 2rem;
+    --page-pad-top: 6rem;
+    --page-pad-bottom: 7rem;
+    --header-gap: 5.5rem;
+    --section-gap: 7rem;
+    --column-gap: 4rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --page-pad-left: 2.5rem;
+    --page-pad-right: 2.5rem;
+  }
+}
+
+/* Toggleable layout inspector. Section, column, text, and media colors differ
+   so padding and gaps remain visible at a glance. */
+.layout-debug-toggle {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  border: 1px solid rgba(103, 232, 249, 0.65);
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  color: #ecfeff;
+  background: rgba(15, 20, 22, 0.94);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.layout-debug-legend {
+  position: fixed;
+  right: 1rem;
+  bottom: 4.5rem;
+  z-index: 100;
+  display: grid;
+  gap: 0.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 0.75rem;
+  padding: 0.8rem 1rem;
+  color: #e5e7eb;
+  background: rgba(15, 20, 22, 0.96);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.layout-debug-legend span::before {
+  width: 0.65rem;
+  height: 0.65rem;
+  margin-right: 0.5rem;
+  border: 2px solid;
+  display: inline-block;
+  content: '';
+}
+
+.layout-debug-legend [data-color="page"]::before {
+  border-color: #facc15;
+}
+
+.layout-debug-legend [data-color="section"]::before {
+  border-color: #f472b6;
+}
+
+.layout-debug-legend [data-color="column"]::before {
+  border-color: #22d3ee;
+}
+
+.layout-debug-legend [data-color="text"]::before {
+  border-color: #4ade80;
+}
+
+.layout-debug-legend [data-color="media"]::before {
+  border-color: #fb923c;
+}
+
+.layout-debug .project-page {
+  outline: 2px solid #facc15;
+  background-color: rgba(250, 204, 21, 0.035);
+}
+
+.layout-debug .project-page > header,
+.layout-debug .project-page > section {
+  outline: 2px solid #f472b6;
+  background-color: rgba(244, 114, 182, 0.055);
+}
+
+.layout-debug .project-page .grid > * {
+  outline: 2px dashed #22d3ee;
+  background-color: rgba(34, 211, 238, 0.045);
+}
+
+.layout-debug .project-page p,
+.layout-debug .project-page li,
+.layout-debug .project-page h1,
+.layout-debug .project-page h2,
+.layout-debug .project-page h3 {
+  outline: 1px solid #4ade80;
+}
+
+.layout-debug .project-page img,
+.layout-debug .project-page video,
+.layout-debug .project-page figure {
+  outline: 2px solid #fb923c;
+}
+
+.layout-debug .page-shell {
+  outline: 2px solid #facc15;
+  background-color: rgba(250, 204, 21, 0.035);
+}
+
+.layout-debug .project-grid {
+  outline: 2px solid #f472b6;
+}
+
+.layout-debug .project-grid > * {
+  outline: 2px dashed #22d3ee;
+  background-color: rgba(34, 211, 238, 0.045);
+}
+
+/* ── Text wrapping — prevent overflow on narrow screens */
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+td,
+th {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* ── Headings ───────────────────────────────────────── */
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* ── Monospace — only for code / technical labels ───── */
+code,
+pre,
+kbd,
+samp,
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'SF Mono', Monaco,
+    'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+}
+
+/* ── Links — inherit colour by default ─────────────── */
+a {
+  font-weight: 500;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* ── Buttons ────────────────────────────────────────── */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #4f46e5;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ── Media — never overflow their container ─────────── */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Calibration hover widget (ResearchLab page) ────── */
+.calibration-base {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.calibration-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.calibration-subimage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.calibration-hover:hover .calibration-base {
+  opacity: 0;
+}
+.calibration-hover:hover .calibration-overlay {
+  opacity: 1;
+}
+
+/* ── Hover cross-fade image widget ──────────────────── */
+.hover-image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #3a4248;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hover-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.hover-image.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.hover-image-container:hover .hover-image.overlay {
+  opacity: 1;
+}
+.hover-image-container:hover .hover-image.base {
+  opacity: 0;
+}
