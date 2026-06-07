@@ -79,7 +79,7 @@ function GroceryBaggerProject() {
           </p>
           <div className="mt-8 space-y-5 text-gray-300">
             {packingPoints.map((point) => (
-              <p key={point} className="border-l border-cyan-300/40 pl-4 leading-relaxed">
+              <p key={point} className="accent-item">
                 {point}
               </p>
             ))}

@@ -91,7 +91,7 @@ function LaserWeeding() {
           {controlStages.map((stage) => (
             <p
               key={stage}
-              className="border-l border-cyan-300/40 py-1 pl-5 text-gray-300 leading-relaxed"
+              className="accent-item py-1 text-gray-300"
             >
               {stage}
             </p>
@@ -128,7 +128,7 @@ function LaserWeeding() {
           <h2 className="mb-6 text-2xl font-semibold">Technical Focus</h2>
           <ul className="space-y-5 text-gray-300">
             {focusAreas.map((item) => (
-              <li key={item} className="border-l border-cyan-300/40 pl-5 leading-relaxed">
+              <li key={item} className="accent-item">
                 {item}
               </li>
             ))}
@@ -138,7 +138,7 @@ function LaserWeeding() {
           <h2 className="mb-6 text-2xl font-semibold">Future Improvements</h2>
           <ul className="space-y-5 text-gray-300">
             {futureWork.map((item) => (
-              <li key={item} className="border-l border-cyan-300/40 pl-5 leading-relaxed">
+              <li key={item} className="accent-item">
                 {item}
               </li>
             ))}

@@ -57,7 +57,7 @@ function About() {
               ].map((item) => (
                 <li
                   key={item}
-                  className="border-l border-cyan-300/40 pl-5 leading-relaxed"
+                  className="accent-item"
                 >
                   {item}
                 </li>

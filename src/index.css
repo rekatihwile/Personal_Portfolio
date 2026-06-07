@@ -31,6 +31,8 @@
   --text-gap: 1.4rem;
   --heading-gap: 1.4rem;
   --content-line-height: 1.8;
+  /* Left-accent item padding — space between the cyan bar and the text */
+  --accent-pad: 1.75rem;
 }
 
 /* ── Box model reset ────────────────────────────────── */
@@ -78,6 +80,14 @@ body {
 .site-text h2 + p,
 .site-text h3 + p {
   margin-top: var(--heading-gap);
+}
+
+/* Left-accent bar pattern — used on list items and callout paragraphs.
+   Adjust --accent-pad in :root to change spacing globally. */
+.accent-item {
+  border-left: 1px solid rgba(103, 232, 249, 0.4);
+  padding-left: var(--accent-pad);
+  line-height: var(--content-line-height);
 }
 
 /* Shared project layout. These rules intentionally provide spacing without
