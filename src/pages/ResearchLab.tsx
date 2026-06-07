@@ -33,10 +33,10 @@ const futureWork = [
 
 function LaserWeeding() {
   return (
-    <div className="project-page project-page-boxed">
-      <header className="mb-20 space-y-5">
+    <div className="project-page">
+      <header>
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-gray-500">
-          UCLA research/lab context
+          UCLA Research / Lab Context
         </p>
         <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
           Laser Weeder Robotic Treatment System
@@ -47,8 +47,9 @@ function LaserWeeding() {
         </p>
       </header>
 
-      <section className="mb-24 grid gap-12 rounded-2xl border border-white/8 bg-[#13181a] p-8 md:mb-28 md:p-10 lg:grid-cols-2 lg:items-start lg:gap-16">
-        <div className="space-y-6">
+      {/* ── Project Summary ───────────────────────────── */}
+      <section className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
+        <div className="space-y-5">
           <h2 className="text-2xl font-semibold">Project Summary</h2>
           <p className="text-gray-300 leading-relaxed">
             This project was developed as part of UCLA lab/research work. The system used staged
@@ -60,7 +61,7 @@ function LaserWeeding() {
             claim that the full UCLA-affiliated system was solely mine.
           </p>
         </div>
-        <figure className="space-y-5">
+        <figure className="space-y-4">
           <img
             src={media.hero}
             alt="Laser weeder system in a UCLA research and lab context"
@@ -72,20 +73,19 @@ function LaserWeeding() {
         </figure>
       </section>
 
-      <section className="mb-24 rounded-2xl border border-white/8 bg-[#13181a] p-8 md:mb-28 md:p-10">
-        <div className="mb-10 space-y-5">
-          <h2 className="text-2xl font-semibold">System And Control Sequence</h2>
-          <p className="max-w-4xl text-gray-400 leading-relaxed">
-            The control-sequence overlay explains the system behavior over time, including PD
-            control, firing, transit, target re-identification, and final alignment before the next
-            treatment step.
-          </p>
-        </div>
+      {/* ── System And Control Sequence ───────────────── */}
+      <section>
+        <h2 className="mb-4 text-2xl font-semibold">System And Control Sequence</h2>
+        <p className="mb-8 max-w-4xl text-gray-400 leading-relaxed">
+          The control-sequence overlay explains the system behavior over time, including PD
+          control, firing, transit, target re-identification, and final alignment before the next
+          treatment step.
+        </p>
         <LoopingVideos
           src={media.control}
           poster={media.controlPoster}
           text="Timeline overlay showing staged control behavior: PD control, transit, target re-identification, final alignment, and firing."
-          className="rounded-xl border border-white/10 object-contain"
+          className="w-full rounded-xl border border-white/10"
         />
         <div className="mt-10 grid gap-5 lg:grid-cols-2 lg:gap-x-12 lg:gap-y-6">
           {controlStages.map((stage) => (
@@ -99,33 +99,33 @@ function LaserWeeding() {
         </div>
       </section>
 
-      <section className="mb-24 rounded-2xl border border-white/8 bg-[#13181a] p-8 md:mb-28 md:p-10">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">Controlled Demo Result</h2>
-            <p className="text-gray-300 leading-relaxed">
-              The demo video shows phone POV and external POV footage of the laser weeder operating.
-              The clip speeds up partway through so the full treatment sequence can be viewed
-              compactly.
-            </p>
-            <p className="text-gray-300 leading-relaxed">
-              The 16/16 weed-hit result was a controlled demo in favorable conditions, including
-              lighting that was not harshly sunny. It should not be presented as broad field
-              performance.
-            </p>
-          </div>
-          <LoopingVideos
-            src={media.demo}
-            poster={media.demoPoster}
-            text="Controlled demo showing 16/16 successful weed treatments in favorable conditions, with phone POV and external POV."
-            className="rounded-xl border border-white/10 object-cover"
-          />
+      {/* ── Controlled Demo ───────────────────────────── */}
+      <section className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
+        <div className="space-y-5">
+          <h2 className="text-2xl font-semibold">Controlled Demo Result</h2>
+          <p className="text-gray-300 leading-relaxed">
+            The demo video shows phone POV and external POV footage of the laser weeder operating.
+            The clip speeds up partway through so the full treatment sequence can be viewed
+            compactly.
+          </p>
+          <p className="text-gray-300 leading-relaxed">
+            The 16/16 weed-hit result was a controlled demo in favorable conditions, including
+            lighting that was not harshly sunny. It should not be presented as broad field
+            performance.
+          </p>
         </div>
+        <LoopingVideos
+          src={media.demo}
+          poster={media.demoPoster}
+          text="Controlled demo showing 16/16 successful weed treatments in favorable conditions, with phone POV and external POV."
+          className="w-full rounded-xl border border-white/10"
+        />
       </section>
 
-      <section className="mb-24 grid gap-12 md:mb-28 lg:grid-cols-2 lg:gap-16">
-        <div className="rounded-2xl border border-white/8 bg-[#13181a] p-8 md:p-10">
-          <h2 className="mb-8 text-2xl font-semibold">Technical Focus</h2>
+      {/* ── Technical Focus + Future Improvements ─────── */}
+      <section className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <h2 className="mb-6 text-2xl font-semibold">Technical Focus</h2>
           <ul className="space-y-5 text-gray-300">
             {focusAreas.map((item) => (
               <li key={item} className="border-l border-cyan-300/40 pl-5 leading-relaxed">
@@ -134,8 +134,8 @@ function LaserWeeding() {
             ))}
           </ul>
         </div>
-        <div className="rounded-2xl border border-white/8 bg-[#13181a] p-8 md:p-10">
-          <h2 className="mb-8 text-2xl font-semibold">Future Improvements</h2>
+        <div>
+          <h2 className="mb-6 text-2xl font-semibold">Future Improvements</h2>
           <ul className="space-y-5 text-gray-300">
             {futureWork.map((item) => (
               <li key={item} className="border-l border-cyan-300/40 pl-5 leading-relaxed">
@@ -146,8 +146,9 @@ function LaserWeeding() {
         </div>
       </section>
 
-      <section className="mb-24 max-w-4xl rounded-2xl border border-white/8 bg-[#13181a] p-8 md:mb-28 md:p-10">
-        <h2 className="mb-6 text-2xl font-semibold">Research Context</h2>
+      {/* ── Research Context ──────────────────────────── */}
+      <section className="max-w-4xl">
+        <h2 className="mb-5 text-2xl font-semibold">Research Context</h2>
         <p className="text-gray-300 leading-relaxed">
           This work contributed to a research-paper-style system and results presentation in a UCLA
           lab setting. I am intentionally presenting the project as robotics integration work within

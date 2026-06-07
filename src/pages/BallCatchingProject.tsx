@@ -9,13 +9,20 @@ const videos = [
   { src: BASE + '63_RobustJoint.mov', label: 'Robust Joint-Space' },
 ];
 
+const controllers = [
+  { label: 'Decentralized PD', note: 'Independent joint-level PD — simple, no model needed' },
+  { label: 'Joint-Space ID', note: 'Model-based; compensates for inertia and Coriolis forces' },
+  { label: 'Operational-Space ID', note: 'Control expressed in Cartesian task space' },
+  { label: 'Robust Joint-Space', note: 'Adds robustness terms for model uncertainty' },
+];
+
 function BallCatchingProject() {
   return (
     <div className="project-page">
 
       {/* ── Hero ──────────────────────────────────────── */}
-      <header className="mb-12">
-        <p className="text-sm font-medium uppercase tracking-widest text-gray-500 mb-2">
+      <header>
+        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-gray-500">
           MAE C163C — Robotics
         </p>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Ball Catching Project</h1>
@@ -29,18 +36,20 @@ function BallCatchingProject() {
       {/* ── Overview ──────────────────────────────────── */}
       <section className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
         <div>
-          <h2 className="text-2xl font-semibold mb-3">Overview</h2>
-          <p className="text-gray-300 leading-relaxed">
-            This project combines high-speed vision with model-based control. A 2-link planar arm
-            built with <strong className="text-white">Dynamixel MX-28 motors</strong> and
-            3D-printed links tracks and intercepts a thrown ping-pong ball in real time.
-          </p>
-          <p className="mt-4 text-gray-300 leading-relaxed">
-            A calibrated overhead camera streams ball-position data into a trajectory predictor,
-            which computes the expected intercept point and feeds joint-angle targets to the
-            controller. Four controller formulations were evaluated and compared on catch success
-            rate and overshoot.
-          </p>
+          <h2 className="text-2xl font-semibold mb-5">Overview</h2>
+          <div className="space-y-5 text-gray-300 leading-relaxed">
+            <p>
+              This project combines high-speed vision with model-based control. A 2-link planar arm
+              built with <strong className="text-white">Dynamixel MX-28 motors</strong> and
+              3D-printed links tracks and intercepts a thrown ping-pong ball in real time.
+            </p>
+            <p>
+              A calibrated overhead camera streams ball-position data into a trajectory predictor,
+              which computes the expected intercept point and feeds joint-angle targets to the
+              controller. Four controller formulations were evaluated and compared on catch success
+              rate and overshoot.
+            </p>
+          </div>
         </div>
         <img
           src="/images/Ball_Catching_Robot/Experimental_Setup.png"
@@ -52,37 +61,39 @@ function BallCatchingProject() {
       {/* ── Implementation ────────────────────────────── */}
       <section className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
         <div>
-          <h2 className="text-2xl font-semibold mb-3">Implementation</h2>
+          <h2 className="text-2xl font-semibold mb-5">Implementation</h2>
           <p className="text-gray-300 leading-relaxed">
             Four controllers were implemented and benchmarked: decentralized PD, joint-space
             inverse dynamics (JS-ID), operational-space inverse dynamics (OS-ID), and robust
             joint-space. Metrics tracked: time-to-catch, joint overshoot, and success rate across
             varying release angles and distances.
           </p>
-          <div className="mt-6 space-y-4 text-sm text-gray-400">
-            {[
-              { label: 'Decentralized PD', note: 'Independent joint-level PD — simple, no model needed' },
-              { label: 'Joint-Space ID', note: 'Model-based; compensates for inertia and Coriolis forces' },
-              { label: 'Operational-Space ID', note: 'Control expressed in Cartesian task space' },
-              { label: 'Robust Joint-Space', note: 'Adds robustness terms for model uncertainty' },
-            ].map(({ label, note }) => (
-              <div key={label} className="flex gap-3 items-baseline">
-                <span className="text-white font-medium shrink-0">{label} —</span>
-                <span>{note}</span>
+          <div className="mt-8 rounded-xl border border-white/10 overflow-hidden text-sm">
+            {controllers.map(({ label, note }, i) => (
+              <div
+                key={label}
+                className={`grid grid-cols-[160px_1fr] gap-4 px-5 py-4 ${
+                  i % 2 === 0 ? 'bg-white/[0.03]' : ''
+                } ${i !== 0 ? 'border-t border-white/5' : ''}`}
+              >
+                <span className="text-white font-medium leading-relaxed">{label}</span>
+                <span className="text-gray-400 leading-relaxed">{note}</span>
               </div>
             ))}
           </div>
         </div>
-        <LoopingVideos
-          src={BASE + 'IMG_4009.mp4'}
-          text="End-effector tracking test"
-          className="w-full rounded-xl"
-        />
+        <div className="flex items-center justify-center">
+          <LoopingVideos
+            src={BASE + 'IMG_4009.mp4'}
+            text="End-effector tracking test"
+            className="max-h-[520px] rounded-xl"
+          />
+        </div>
       </section>
 
       {/* ── Results ───────────────────────────────────── */}
       <section>
-        <h2 className="text-2xl font-semibold mb-2">Results</h2>
+        <h2 className="text-2xl font-semibold mb-3">Results</h2>
         <p className="text-gray-400 mb-10 max-w-2xl">
           Representative catch clips from each controller variant.
         </p>

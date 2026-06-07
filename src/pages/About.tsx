@@ -1,7 +1,7 @@
 function About() {
   return (
     <div className="project-page">
-      <section className="rounded-2xl border border-white/8 bg-[#13181a] p-8 md:p-10">
+      <header>
         <p className="mb-3 text-sm font-medium uppercase tracking-[0.22em] text-gray-500">
           About Me
         </p>
@@ -12,10 +12,10 @@ function About() {
           I like projects where perception, controls, and physical systems all have to cooperate in
           the real world.
         </p>
-      </section>
+      </header>
 
       <section className="grid gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:items-start lg:gap-16">
-        <div className="rounded-2xl border border-white/8 bg-[#13181a] p-8 md:p-10">
+        <div>
           <h2 className="mb-6 text-2xl font-semibold">Background</h2>
           <div className="space-y-5 text-base leading-relaxed text-gray-300">
             <p>
@@ -46,9 +46,9 @@ function About() {
         </div>
 
         <div className="space-y-10">
-          <div className="rounded-2xl border border-white/8 bg-[#13181a] p-8 md:p-10">
-            <h2 className="mb-6 text-2xl font-semibold">Focus Areas</h2>
-            <ul className="space-y-5 text-gray-300">
+          <div>
+            <h2 className="mb-5 text-2xl font-semibold">Focus Areas</h2>
+            <ul className="space-y-4 text-gray-300">
               {[
                 'Robotics and mechatronic systems',
                 'Computer vision for physical systems',
@@ -65,9 +65,9 @@ function About() {
             </ul>
           </div>
 
-          <div className="rounded-2xl border border-white/8 bg-[#13181a] p-8 md:p-10">
-            <h2 className="mb-6 text-2xl font-semibold">Contact</h2>
-            <div className="space-y-4 text-sm leading-relaxed text-gray-400">
+          <div>
+            <h2 className="mb-5 text-2xl font-semibold">Contact</h2>
+            <div className="space-y-3 text-sm leading-relaxed text-gray-400">
               <p>
                 Reach me at{' '}
                 <a

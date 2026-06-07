@@ -19,17 +19,18 @@
 
   /* Shared page spacing. Tune these values to adjust every project page. */
   --page-max-width: 72rem;
-  --page-pad-left: 1.25rem;
-  --page-pad-right: 1.25rem;
+  --page-pad-left: 1.5rem;
+  --page-pad-right: 1.5rem;
   --page-pad-top: 5rem;
   --page-pad-bottom: 6rem;
   --header-gap: 5rem;
   --section-gap: 6rem;
   --column-gap: 3rem;
   --row-gap: 3rem;
-  --text-gap: 1.25rem;
-  --heading-gap: 1.25rem;
-  --content-line-height: 1.75;
+  /* Text rhythm — increase to loosen spacing between paragraphs */
+  --text-gap: 1.4rem;
+  --heading-gap: 1.4rem;
+  --content-line-height: 1.8;
 }
 
 /* ── Box model reset ────────────────────────────────── */
@@ -176,8 +177,8 @@ body {
 
 @media (min-width: 48rem) {
   :root {
-    --page-pad-left: 2rem;
-    --page-pad-right: 2rem;
+    --page-pad-left: 2.5rem;
+    --page-pad-right: 2.5rem;
     --page-pad-top: 6rem;
     --page-pad-bottom: 7rem;
     --header-gap: 5.5rem;

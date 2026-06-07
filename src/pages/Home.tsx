@@ -47,7 +47,7 @@ function Home() {
           <img
             src="/images/Profile_Picture.jpeg"
             alt="Portrait of Eli Whitaker"
-            className="mt-8 w-44 h-44 md:w-52 md:h-52 rounded-xl object-cover border border-white/10"
+            className="mt-8 w-52 h-52 md:w-64 md:h-64 rounded-xl object-cover border border-white/10"
           />
         </div>
       </section>

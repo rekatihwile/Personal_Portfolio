@@ -28,7 +28,7 @@ export default function LoopingVideos({ src, text, className, poster }: LoopingV
         playsInline
         controls={controls}
         preload="metadata"
-        className={`aspect-video w-full bg-[#15191c] shadow-[0_18px_70px_rgba(0,0,0,0.24)] ${className || ''}`}
+        className={`block mx-auto max-w-full bg-[#15191c] shadow-[0_18px_70px_rgba(0,0,0,0.24)] ${className || ''}`}
       />
       {text && <div className="mt-3 text-sm leading-relaxed text-gray-400">{text}</div>}
     </div>
