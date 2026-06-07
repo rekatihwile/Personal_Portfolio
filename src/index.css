@@ -17,22 +17,36 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Shared page spacing. Tune these values to adjust every project page. */
-  --page-max-width: 72rem;
-  --page-pad-left: 1.5rem;
-  --page-pad-right: 1.5rem;
-  --page-pad-top: 5rem;
-  --page-pad-bottom: 6rem;
-  --header-gap: 5rem;
-  --section-gap: 6rem;
-  --column-gap: 3rem;
-  --row-gap: 3rem;
-  /* Text rhythm — increase to loosen spacing between paragraphs */
-  --text-gap: 1.4rem;
-  --heading-gap: 1.4rem;
-  --content-line-height: 1.8;
-  /* Left-accent item padding — space between the cyan bar and the text */
-  --accent-pad: 1.75rem;
+  /* ─────────────────────────────────────────────────────────────────
+     LAYOUT SPACING TOKENS
+     Each group matches a layer in the "Show layout" debug overlay.
+     The hex swatch in each comment is the overlay colour for that layer.
+     ───────────────────────────────────────────────────────────────── */
+
+  /* PAGE PADDING  #facc15  ── outermost yellow box in the overlay
+     Controls the max-width cap and the gutter on all sides of every page. */
+  --page-max-width:    72rem;   /* hard cap on content column width        */
+  --page-pad-left:     1.5rem;  /* horizontal gutter (mobile)              */
+  --page-pad-right:    1.5rem;
+  --page-pad-top:      5rem;    /* space above the hero header             */
+  --page-pad-bottom:   6rem;    /* space below the last section            */
+
+  /* SECTIONS / ROWS  #f472b6  ── pink boxes, one per <section> / <header>
+     Controls the vertical rhythm between the hero and each content block. */
+  --header-gap:        5rem;    /* space below the hero header             */
+  --section-gap:       6rem;    /* space between consecutive sections      */
+
+  /* GRID COLUMNS  #22d3ee  ── cyan dashed boxes inside each section
+     Controls horizontal gaps between columns in two-column layouts. */
+  --column-gap:        3rem;    /* gap between left and right columns      */
+  --row-gap:           3rem;    /* gap between rows in multi-row grids     */
+
+  /* TEXT  #4ade80  ── green outlines on paragraphs, headings, list items
+     Controls paragraph spacing, heading margins, and line height. */
+  --text-gap:          1.4rem;  /* space between consecutive <p> blocks    */
+  --heading-gap:       1.4rem;  /* space between a heading and its first p */
+  --content-line-height: 1.8;   /* line height for all body text           */
+  --accent-pad:        1.75rem; /* padding-left on .accent-item bars       */
 }
 
 /* ── Box model reset ────────────────────────────────── */
