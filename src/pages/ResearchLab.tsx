@@ -1,7 +1,7 @@
 import LoopingVideos from '../components/LoopingVideos';
 
 const media = {
-  hero: '/images/Laser_Weeder/ucla-laser-weeder-system-hq.jpg',
+  hero: '/images/Laser_Weeder/home-hero-preview.jpg',
   control: '/videos/Laser_Weeder/control-sequence-overlay-h264.mp4',
   controlPoster: '/images/Laser_Weeder/control-sequence-poster.jpg',
   demo: '/videos/Laser_Weeder/controlled-demo-two-perspective-h264.mp4',

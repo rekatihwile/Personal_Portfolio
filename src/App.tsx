@@ -7,7 +7,6 @@ import UkuleleStrapProject from './pages/UkuleleStrapProject';
 import LaserWeeding from './pages/ResearchLab';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import LayoutDebugToggle from './components/LayoutDebugToggle';
 import './App.css';
 
 function App() {
@@ -46,7 +45,6 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <LayoutDebugToggle />
       </div>
     </Router>
   );

@@ -3,10 +3,17 @@ import { Link } from 'react-router-dom';
 const projects = [
   {
     to: '/projects/grocery-bagger',
-    img: '/images/Grocery_Bagger/yolo-training-scene.jpg',
-    alt: 'Grocery item recognition scene for the autonomous bagging robot',
+    img: '/images/Grocery_Bagger/home-hero-preview.jpg',
+    alt: 'Autonomous grocery bagging robot hero photo',
     title: 'Autonomous Grocery Bagging Robot',
     desc: 'Physical robot demo for autonomous grocery packing using item recognition and deterministic geometry-based packing heuristics.',
+  },
+  {
+    to: '/projects/laser-weeder',
+    img: '/images/Laser_Weeder/home-hero-preview.jpg',
+    alt: 'Laser weeder robotic treatment system in a UCLA research context',
+    title: 'Laser Weeder Robotic Treatment System',
+    desc: 'Robotic laser weed treatment system using staged control, target re-identification, and timed firing in a UCLA lab context.',
   },
   {
     to: '/projects/ball-catching',
@@ -14,13 +21,6 @@ const projects = [
     alt: 'Ball catching robot setup',
     title: 'Ball Catching Project',
     desc: 'Computer vision plus a 2-DOF planar arm intercepting ping-pong trajectories across four controller variants.',
-  },
-  {
-    to: '/projects/laser-weeder',
-    img: '/images/Laser_Weeder/ucla-laser-weeder-system-hq.jpg',
-    alt: 'Laser weeder robotic treatment system in a UCLA research context',
-    title: 'Laser Weeder Robotic Treatment System',
-    desc: 'Robotic laser weed treatment system using staged control, target re-identification, and timed firing in a UCLA lab context.',
   },
   {
     to: '/projects/ukulele-strap',
