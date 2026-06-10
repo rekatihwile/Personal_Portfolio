@@ -74,32 +74,6 @@ function LaserWeeding() {
         </figure>
       </section>
 
-      <section className="mx-auto mb-16 max-w-4xl md:mb-20">
-        <h2 className="mb-4 text-2xl font-semibold">System And Control Sequence</h2>
-        <p className="mb-8 max-w-4xl text-gray-400 leading-relaxed">
-          The control-sequence overlay explains the system behavior over time, including PD
-          control, firing, transit, target re-identification, and final alignment before the next
-          treatment step.
-        </p>
-        <div className="mx-auto w-full max-w-3xl">
-          <LoopingVideos
-            src={media.control}
-            poster={media.controlPoster}
-            startAt={7}
-            size="full"
-            text="Timeline overlay showing staged control behavior: PD control, transit, target re-identification, final alignment, and firing."
-            className="rounded-xl border border-white/10"
-          />
-        </div>
-        <div className="mt-10 grid gap-5 lg:grid-cols-2 lg:gap-x-12 lg:gap-y-6">
-          {controlStages.map((stage) => (
-            <p key={stage} className="accent-item py-1 text-gray-300">
-              {stage}
-            </p>
-          ))}
-        </div>
-      </section>
-
       <section className="mb-16 grid gap-8 md:mb-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-10">
         <div className="space-y-5">
           <h2 className="text-2xl font-semibold">Controlled Demo Result</h2>
@@ -122,6 +96,30 @@ function LaserWeeding() {
             size="full"
             className="rounded-xl border border-white/10"
           />
+        </div>
+      </section>
+
+      <section className="mx-auto mb-16 max-w-4xl md:mb-20">
+        <h2 className="mb-4 text-2xl font-semibold">System And Control Sequence</h2>
+        <p className="mb-8 max-w-4xl text-gray-400 leading-relaxed">
+          The control-sequence overlay explains the system behavior over time, including PD
+          control, firing, transit, target re-identification, and final alignment before the next
+          treatment step.
+        </p>
+        <LoopingVideos
+          src={media.control}
+          poster={media.controlPoster}
+          startAt={7}
+          size="full"
+          text="Timeline overlay showing staged control behavior: PD control, transit, target re-identification, final alignment, and firing."
+          className="rounded-xl border border-white/10"
+        />
+        <div className="mt-10 grid gap-5 lg:grid-cols-2 lg:gap-x-12 lg:gap-y-6">
+          {controlStages.map((stage) => (
+            <p key={stage} className="accent-item py-1 text-gray-300">
+              {stage}
+            </p>
+          ))}
         </div>
       </section>
 
