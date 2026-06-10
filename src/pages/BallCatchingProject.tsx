@@ -18,20 +18,20 @@ const controllers = [
 
 function BallCatchingProject() {
   return (
-    <div className="project-page">
-      <header>
+    <div className="project-page mx-auto w-full max-w-6xl px-6 py-14 sm:px-8 lg:px-10">
+      <header className="mx-auto mb-16 max-w-4xl text-center md:mb-20">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-gray-500">
           MAE C163C - Robotics
         </p>
         <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Ball Catching Project</h1>
-        <p className="mt-3 max-w-2xl text-lg leading-relaxed text-gray-400">
+        <p className="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-gray-400">
           Computer vision plus a 2-DOF planar arm intercepting ping-pong trajectories across four
           controller variants, built in the final course of the MAE C163A/B/C robotics elective
           sequence.
         </p>
       </header>
 
-      <section className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
+      <section className="mb-16 grid gap-8 md:mb-20 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div>
           <h2 className="mb-5 text-2xl font-semibold">Overview</h2>
           <div className="space-y-5 leading-relaxed text-gray-300">
@@ -48,14 +48,16 @@ function BallCatchingProject() {
             </p>
           </div>
         </div>
-        <img
-          src="/images/Ball_Catching_Robot/Experimental_Setup.png"
-          alt="Experimental setup with a 2-link arm and overhead camera for ball tracking"
-          className="w-full rounded-xl border border-white/10 bg-[#0f1213]"
-        />
+        <div className="mx-auto w-full max-w-xl overflow-hidden rounded-xl border border-white/10 bg-[#0f1213] lg:h-[22rem]">
+          <img
+            src="/images/Ball_Catching_Robot/Experimental_Setup.png"
+            alt="Experimental setup with a 2-link arm and overhead camera for ball tracking"
+            className="h-full w-full object-cover"
+          />
+        </div>
       </section>
 
-      <section className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
+      <section className="mb-16 grid gap-8 md:mb-20 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div>
           <h2 className="mb-5 text-2xl font-semibold">Implementation</h2>
           <p className="leading-relaxed text-gray-300">
@@ -78,18 +80,18 @@ function BallCatchingProject() {
             ))}
           </div>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="mx-auto w-full max-w-md">
           <LoopingVideos
             src={BASE + 'IMG_4009.mp4'}
             portrait
-            size="sm"
+            size="full"
             text="End-effector tracking test."
-            className="rounded-xl"
+            className="rounded-xl border border-white/10"
           />
         </div>
       </section>
 
-      <section>
+      <section className="mx-auto mb-10 max-w-4xl">
         <h2 className="mb-3 text-2xl font-semibold">Results</h2>
         <p className="mb-10 max-w-2xl text-gray-400">
           Representative catch clips from each controller variant.

@@ -1,20 +1,20 @@
 function About() {
   return (
-    <div className="project-page">
-      <header>
+    <div className="project-page mx-auto w-full max-w-6xl px-6 py-14 sm:px-8 lg:px-10">
+      <header className="mx-auto mb-16 max-w-4xl text-center md:mb-20">
         <p className="mb-3 text-sm font-medium uppercase tracking-[0.22em] text-gray-500">
           About Me
         </p>
-        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight md:text-5xl">
+        <h1 className="mx-auto max-w-3xl text-4xl font-semibold tracking-tight md:text-5xl">
           Mechanical engineering, robotics, and real hardware that has to work.
         </h1>
-        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-gray-400">
+        <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-gray-400">
           I like projects where perception, controls, and physical systems all have to cooperate in
           the real world.
         </p>
       </header>
 
-      <section className="grid gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:items-start lg:gap-16">
+      <section className="grid gap-8 md:mb-20 lg:grid-cols-[1.25fr_0.75fr] lg:items-start lg:gap-10">
         <div>
           <h2 className="mb-6 text-2xl font-semibold">Background</h2>
           <div className="space-y-5 text-base leading-relaxed text-gray-300">

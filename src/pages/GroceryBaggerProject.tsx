@@ -61,17 +61,17 @@ function GroceryBaggerProject() {
             />
           </div>
           <figcaption className="mt-4 text-sm leading-relaxed text-gray-400">
-            Continuous pick-and-place hero demo showing the grocery bagging system operating over
-            an extended sequence.
+            Continuous pick-and-place hero demo showing the grocery bagging system operating over an
+            extended sequence.
           </figcaption>
         </figure>
         <figure className="flex h-full flex-col">
           <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0f1213] lg:h-[28rem]">
-          <img
-            src={media.manipulator}
-            alt="Full grocery bagging system with numbered labels marking the overhead webcam, stereo webcam, manipulator, grasped grocery item, bag region, and staging platform"
-            className="h-full w-full object-cover"
-          />
+            <img
+              src={media.manipulator}
+              alt="Full grocery bagging system with numbered labels marking the overhead webcam, stereo webcam, manipulator, grasped grocery item, bag region, and staging platform"
+              className="h-full w-full object-cover"
+            />
           </div>
           <figcaption className="mt-4 text-sm leading-relaxed text-gray-400">
             Full system prototype during autonomous grocery placement. Figure labels: (1) overhead
@@ -82,7 +82,7 @@ function GroceryBaggerProject() {
         </figure>
       </section>
 
-      <section className="mb-24 max-w-3xl md:mb-28">
+      <section className="mb-24 w-full md:mb-28">
         <h2 className="mb-5 text-2xl font-semibold">Project Summary</h2>
         <p className="text-gray-300 leading-relaxed">
           This was a capstone robotics and mechatronics project built around a physical manipulator
