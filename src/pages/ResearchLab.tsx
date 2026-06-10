@@ -99,21 +99,25 @@ function LaserWeeding() {
         </div>
       </section>
 
-      <section className="mx-auto mb-16 max-w-4xl md:mb-20">
+      <section className="mx-auto mb-16 w-full max-w-5xl md:mb-20">
         <h2 className="mb-4 text-2xl font-semibold">System And Control Sequence</h2>
-        <p className="mb-8 max-w-4xl text-gray-400 leading-relaxed">
-          The control-sequence overlay explains the system behavior over time, including PD
-          control, firing, transit, target re-identification, and final alignment before the next
-          treatment step.
-        </p>
-        <LoopingVideos
-          src={media.control}
-          poster={media.controlPoster}
-          startAt={7}
-          size="full"
-          text="Timeline overlay showing staged control behavior: PD control, transit, target re-identification, final alignment, and firing."
-          className="rounded-xl border border-white/10"
-        />
+        <div className="mx-auto max-w-4xl">
+          <p className="mb-8 text-gray-400 leading-relaxed">
+            The control-sequence overlay explains the system behavior over time, including PD
+            control, firing, transit, target re-identification, and final alignment before the next
+            treatment step.
+          </p>
+        </div>
+        <div className="mx-auto w-full max-w-5xl">
+          <LoopingVideos
+            src={media.control}
+            poster={media.controlPoster}
+            startAt={7}
+            size="full"
+            text="Timeline overlay showing staged control behavior: PD control, transit, target re-identification, final alignment, and firing."
+            className="rounded-xl border border-white/10"
+          />
+        </div>
         <div className="mt-10 grid gap-5 lg:grid-cols-2 lg:gap-x-12 lg:gap-y-6">
           {controlStages.map((stage) => (
             <p key={stage} className="accent-item py-1 text-gray-300">
