@@ -39,6 +39,15 @@ __pycache__/
 *.HEIC
 !public/videos/Grocery_Bagger/
 !public/videos/Grocery_Bagger/**
+!public/videos/Ball_Catching_Project/63_Decentralized.mov
+!public/videos/Ball_Catching_Project/63_RobustJoint.mov
+!public/videos/Ball_Catching_Project/IMG_4009.mp4
+!public/videos/Ball_Catching_Project/JointSpaceInverseDynamics.mov
+!public/videos/Ball_Catching_Project/OperationalInverseDynamics.mov
+!public/videos/Laser_Weeder/control-sequence-overlay-h264.mp4
+!public/videos/Laser_Weeder/controlled-demo-two-perspective-h264.mp4
+public/videos/Laser_Weeder/control-sequence-overlay.mp4
+public/videos/Laser_Weeder/controlled-demo-two-perspective.mp4
 
 # Raw staging media
 portfolio_media_staging/
