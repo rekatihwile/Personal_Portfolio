@@ -37,6 +37,8 @@ __pycache__/
 *.MOV
 *.heic
 *.HEIC
+!public/videos/Grocery_Bagger/
+!public/videos/Grocery_Bagger/**
 
 # Raw staging media
 portfolio_media_staging/
