@@ -48,25 +48,36 @@ function GroceryBaggerProject() {
       </header>
 
       <section className="mb-24 grid gap-12 md:mb-28 lg:grid-cols-2 lg:items-start lg:gap-16">
-        <div>
-          <LoopingVideos
-            src={media.hero}
-            size="full"
-            text="Continuous pick-and-place hero demo showing the grocery bagging system operating over an extended sequence."
-            className="rounded-xl border border-white/10"
-          />
-        </div>
-        <figure>
+        <figure className="flex h-full flex-col">
+          <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0f1213] lg:h-[28rem]">
+            <video
+              src={media.hero}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              className="block h-full w-full bg-[#15191c] object-cover shadow-[0_18px_70px_rgba(0,0,0,0.24)]"
+            />
+          </div>
+          <figcaption className="mt-4 text-sm leading-relaxed text-gray-400">
+            Continuous pick-and-place hero demo showing the grocery bagging system operating over
+            an extended sequence.
+          </figcaption>
+        </figure>
+        <figure className="flex h-full flex-col">
+          <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0f1213] lg:h-[28rem]">
           <img
             src={media.manipulator}
             alt="Full grocery bagging system with numbered labels marking the overhead webcam, stereo webcam, manipulator, grasped grocery item, bag region, and staging platform"
-            className="w-full rounded-xl border border-white/10 bg-[#0f1213] object-contain"
+            className="h-full w-full object-cover"
           />
+          </div>
           <figcaption className="mt-4 text-sm leading-relaxed text-gray-400">
-            Full system prototype during autonomous grocery placement. The numbered labels identify
-            the overhead webcam, stereo webcam, SCARA-like manipulator and robot frame, grasped
-            grocery item, bag placement region, and the staging platform used for perception
-            calibration and candidate filtering.
+            Full system prototype during autonomous grocery placement. Figure labels: (1) overhead
+            webcam, (2) stereo webcam, (3) SCARA-like manipulator and robot frame, (4) grasped
+            grocery item, (5) grocery bag and placement region, and (6) staging platform used for
+            perception calibration and candidate filtering.
           </figcaption>
         </figure>
       </section>
@@ -136,7 +147,7 @@ function GroceryBaggerProject() {
         </div>
       </section>
 
-      <section className="mb-24 grid gap-12 md:mb-28 lg:grid-cols-2 lg:items-start lg:gap-16">
+      <section className="mb-24 max-w-3xl md:mb-28">
         <div>
           <h2 className="mb-5 text-2xl font-semibold">Full System Prototype</h2>
           <p className="text-gray-300 leading-relaxed">
@@ -150,19 +161,6 @@ function GroceryBaggerProject() {
             robot reach, item visibility, and bag access all had to cooperate for the packing demo
             to work reliably.
           </p>
-        </div>
-        <div className="rounded-xl border border-white/10 bg-[#0f1213] p-6">
-          <p className="text-sm font-medium uppercase tracking-widest text-gray-500">
-            Figure Labels
-          </p>
-          <div className="mt-5 space-y-4 text-gray-300">
-            <p>\u2460 Overhead webcam</p>
-            <p>\u2461 Stereo webcam</p>
-            <p>\u2462 SCARA-like manipulator, base, and robot frame</p>
-            <p>\u2463 Grasped grocery item</p>
-            <p>\u2464 Grocery bag and place region</p>
-            <p>\u2465 Staging platform used for perception calibration and candidate filtering</p>
-          </div>
         </div>
       </section>
 

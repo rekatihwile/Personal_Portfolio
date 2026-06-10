@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="mt-16 border-t border-white/10 bg-[#0f1213]">
       <div className="mx-auto max-w-6xl px-4 py-12 text-gray-300">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+        <div className="flex flex-col items-center justify-between gap-6 md:flex-row md:items-start">
           <div>
             <p className="text-sm">UCLA Mechanical Engineering Student</p>
             <p className="text-sm">Expected Graduation: June 2026</p>
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="mt-6 text-xs text-gray-500">
-          © {new Date().getFullYear()} Eli Whitaker. All rights reserved.
+          Copyright {new Date().getFullYear()} Eli Whitaker. All rights reserved.
         </p>
       </div>
     </footer>
