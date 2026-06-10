@@ -84,6 +84,7 @@ function LaserWeeding() {
         <LoopingVideos
           src={media.control}
           poster={media.controlPoster}
+          startAt={7}
           size="lg"
           text="Timeline overlay showing staged control behavior: PD control, transit, target re-identification, final alignment, and firing."
           className="rounded-xl border border-white/10"

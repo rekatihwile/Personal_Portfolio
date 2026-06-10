@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 // Named size presets — each maps to a CSS variable in index.css :root.
 // Tune the variables there to resize all videos of that size at once.
@@ -16,6 +16,7 @@ type LoopingVideoProps = {
   src: string;
   text?: string;
   poster?: string;
+  startAt?: number;
   /** Extra CSS classes for visual styling: rounded-xl, border, etc. (not sizing) */
   className?: string;
   /**
@@ -47,6 +48,7 @@ export default function LoopingVideos({
   src,
   text,
   poster,
+  startAt = 0,
   className,
   size = 'full',
   portrait = false,
@@ -54,6 +56,7 @@ export default function LoopingVideos({
   maxHeight,
 }: LoopingVideoProps) {
   const [controls, setControls] = useState(false);
+  const hasSeekedRef = useRef(false);
 
   const style: React.CSSProperties = {
     width: maxWidth ?? SIZE_VAR[size],
@@ -79,6 +82,13 @@ export default function LoopingVideos({
         playsInline
         controls={controls}
         preload="metadata"
+        onLoadedMetadata={(event) => {
+          if (startAt <= 0 || hasSeekedRef.current) return;
+          const video = event.currentTarget;
+          const safeStartTime = Math.min(startAt, Math.max(video.duration - 0.1, 0));
+          video.currentTime = safeStartTime;
+          hasSeekedRef.current = true;
+        }}
         style={style}
         className={`block mx-auto max-w-full bg-[#15191c] shadow-[0_18px_70px_rgba(0,0,0,0.24)] ${className ?? ''}`}
       />
