@@ -123,26 +123,30 @@ function GroceryBaggerProject() {
 
       <section className="mb-24 grid gap-12 md:mb-28 lg:grid-cols-2 lg:items-start lg:gap-16">
         <div>
-          <h2 className="mb-5 text-2xl font-semibold">Hardware Prototype</h2>
+          <h2 className="mb-5 text-2xl font-semibold">Full System Prototype</h2>
           <p className="text-gray-300 leading-relaxed">
-            The manipulator was physically prototyped, assembled, and tested. Grasp reliability,
-            padding, wiring, clearance, and bag deformation all affected what the software could
-            reasonably command.
+            This view shows the integrated grocery bagging setup during autonomous placement, not
+            just the arm in isolation. The final prototype combined the SCARA-like manipulator, an
+            overhead webcam, a stereo webcam, a staging platform, and the bag placement region into
+            one working perception-to-action system.
           </p>
           <p className="mt-5 text-gray-300 leading-relaxed">
-            Working with the real mechanism made the project less about ideal packing and more about
-            making perception and motion cooperate under hardware limits.
+            Seeing the full rig in one frame makes the real constraints clearer: camera placement,
+            robot reach, item visibility, and bag access all had to cooperate for the packing demo
+            to work reliably.
           </p>
         </div>
         <figure>
           <img
             src={media.manipulator}
-            alt="Early grocery bagger manipulator prototype in a makerspace vise grip"
+            alt="Full grocery bagging system with numbered labels marking the overhead webcam, stereo webcam, manipulator, grasped grocery item, bag region, and staging platform"
             className="w-full rounded-xl border border-white/10 bg-[#0f1213] object-contain"
           />
           <figcaption className="mt-4 text-sm leading-relaxed text-gray-400">
-            Early manipulator prototype in the makerspace before final wiring, padding, and full
-            integration.
+            Full system prototype during autonomous grocery placement. The numbered labels identify
+            the overhead webcam, stereo webcam, SCARA-like manipulator and robot frame, grasped
+            grocery item, bag placement region, and the staging platform used for perception
+            calibration and candidate filtering.
           </figcaption>
         </figure>
       </section>
