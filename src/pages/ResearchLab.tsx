@@ -94,6 +94,7 @@ function LaserWeeding() {
           <LoopingVideos
             src={media.demo}
             poster={media.demoPoster}
+            startAt={10}
             text="Controlled demo showing 16/16 successful weed treatments in favorable conditions, with phone POV and external POV."
             size="full"
             className="rounded-xl border border-white/10"
