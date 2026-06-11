@@ -67,8 +67,8 @@ function GroceryBaggerProject() {
             />
           </div>
           <figcaption className="mt-3 text-sm leading-relaxed text-gray-400">
-            Continuous pick-and-place hero demo showing the grocery bagging system operating over
-            an extended sequence.
+            Continuous pick-and-place hero demo showing the grocery bagging system operating over an
+            extended sequence.
           </figcaption>
         </figure>
 
@@ -89,7 +89,7 @@ function GroceryBaggerProject() {
         </figure>
       </section>
 
-      <section className="mx-auto mb-16 w-full max-w-5xl md:mb-20">
+      {/* <section className="mx-auto mb-16 w-full max-w-5xl md:mb-20">
         <h2 className="mb-5 text-2xl font-semibold">Interactive 3D Demo</h2>
         <p className="text-gray-300 leading-relaxed">
           A simplified digital twin of the bagging cycle: the SCARA-like arm moves over the staging
@@ -106,14 +106,14 @@ function GroceryBaggerProject() {
             <GroceryBaggerSim />
           </Suspense>
         </div>
-      </section>
+      </section> */}
 
       <section className="mx-auto mb-16 w-full max-w-4xl md:mb-20">
         <h2 className="mb-5 text-2xl font-semibold">Project Summary</h2>
         <p className="text-gray-300 leading-relaxed">
-          This capstone project integrated a SCARA-like RRPR manipulator, a stereo camera,
-          overhead monitoring, Python planning software, and Teensy-based motion control into a
-          working grocery bagging prototype. The system detects groceries on a staging platform,
+          This capstone project integrated a SCARA-like RRPR manipulator, a stereo camera, overhead
+          monitoring, Python planning software, and Teensy-based motion control into a working
+          grocery bagging prototype. The system detects groceries on a staging platform,
           reconstructs approximate geometry, maps targets into the robot frame, selects feasible bag
           placements, and executes physical pick-and-place actions on hardware.
         </p>
@@ -129,16 +129,17 @@ function GroceryBaggerProject() {
         <h2 className="mb-5 text-2xl font-semibold">Perception And Calibration</h2>
         <div className="mx-auto max-w-4xl">
           <p className="text-gray-300 leading-relaxed">
-            The perception stack combined a custom YOLO segmentation model with RAFT-Stereo disparity
-            to isolate grocery geometry from side-by-side stereo imagery. The selected mask was
-            applied to the disparity map so the system kept depth values for the target grocery while
-            rejecting the surrounding platform, arm, and background. The resulting masked point cloud
-            was then mapped from camera coordinates into the robot frame for grasping and placement.
+            The perception stack combined a custom YOLO segmentation model with RAFT-Stereo
+            disparity to isolate grocery geometry from side-by-side stereo imagery. The selected
+            mask was applied to the disparity map so the system kept depth values for the target
+            grocery while rejecting the surrounding platform, arm, and background. The resulting
+            masked point cloud was then mapped from camera coordinates into the robot frame for
+            grasping and placement.
           </p>
           <p className="mt-5 text-gray-300 leading-relaxed">
             The overhead webcam provided an additional height-indexed homography path for planar XY
-            refinement. That mattered because groceries at different heights project differently into
-            the camera image even when their true robot-frame XY position is unchanged.
+            refinement. That mattered because groceries at different heights project differently
+            into the camera image even when their true robot-frame XY position is unchanged.
           </p>
         </div>
         <figure className="mx-auto mt-8 w-full max-w-5xl">
@@ -288,8 +289,8 @@ function GroceryBaggerProject() {
           <h2 className="mb-5 text-2xl font-semibold">What This Project Proved</h2>
           <ul className="space-y-4 text-gray-300">
             <li className="leading-relaxed">
-              The system tied together perception, calibration, planning, control, and recovery
-              into one working physical demo.
+              The system tied together perception, calibration, planning, control, and recovery into
+              one working physical demo.
             </li>
             <li className="leading-relaxed">
               Placement decisions depended on the current packed state rather than a single fixed

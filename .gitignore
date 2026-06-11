@@ -43,3 +43,6 @@ __pycache__/
 
 # Raw staging media
 portfolio_media_staging/
+
+# Local-only notes
+LOCAL_VIDEO_COMPRESSION_README.md
