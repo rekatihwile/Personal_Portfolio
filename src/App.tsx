@@ -4,20 +4,39 @@ import About from './pages/About';
 import BallCatchingProject from './pages/BallCatchingProject';
 import GroceryBaggerProject from './pages/GroceryBaggerProject';
 import UkuleleStrapProject from './pages/UkuleleStrapProject';
+import { Suspense, lazy } from 'react';
 import LaserWeeding from './pages/ResearchLab';
+import NotFound from './pages/NotFound';
+
+const Resume = lazy(() => import('./pages/Resume'));
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import './App.css';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-[#171a1c] text-gray-100">
         <Navbar />
         <main className="site-text flex-1 pt-14">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route
+              path="/resume"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="mx-auto w-full max-w-3xl px-6 py-14 sm:px-8">
+                      <div className="h-[36rem] animate-pulse rounded-xl border border-white/10 bg-[#0f1213]" />
+                    </div>
+                  }
+                >
+                  <Resume />
+                </Suspense>
+              }
+            />
             {/* Project routes */}
             <Route path="/projects/ball-catching" element={<BallCatchingProject />} />
             <Route path="/projects/grocery-bagger" element={<GroceryBaggerProject />} />
@@ -36,12 +55,8 @@ function App() {
               path="/UkuleleStrapProject"
               element={<Navigate to="/projects/ukulele-strap" replace />}
             />
-            <Route
-              path="/DiscordAIBot"
-              element={<Navigate to="/projects/discord-ai-bot" replace />}
-            />
             {/* 404 */}
-            <Route path="*" element={<div className="px-6 py-20 text-center">Not found.</div>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

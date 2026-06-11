@@ -1,12 +1,13 @@
 import LoopingVideos from '../components/LoopingVideos';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 const BASE = '/videos/Ball_Catching_Project/';
 
 const videos = [
-  { src: BASE + '63_Decentralized.mov', label: 'Decentralized PD' },
-  { src: BASE + 'JointSpaceInverseDynamics.mov', label: 'Joint-Space Inverse Dynamics' },
-  { src: BASE + 'OperationalInverseDynamics.mov', label: 'Operational-Space Inverse Dynamics' },
-  { src: BASE + '63_RobustJoint.mov', label: 'Robust Joint-Space' },
+  { src: BASE + '63_Decentralized.mp4', label: 'Decentralized PD' },
+  { src: BASE + 'JointSpaceInverseDynamics.mp4', label: 'Joint-Space Inverse Dynamics' },
+  { src: BASE + 'OperationalInverseDynamics.mp4', label: 'Operational-Space Inverse Dynamics' },
+  { src: BASE + '63_RobustJoint.mp4', label: 'Robust Joint-Space' },
 ];
 
 const controllers = [
@@ -17,9 +18,10 @@ const controllers = [
 ];
 
 function BallCatchingProject() {
+  usePageTitle('Ball Catching Project');
   return (
     <div className="project-page mx-auto w-full max-w-6xl px-6 py-14 sm:px-8 lg:px-10">
-      <header className="mx-auto mb-16 max-w-4xl text-center md:mb-20">
+      <header className="mx-auto mb-16 max-w-4xl animate-fade-up text-center motion-reduce:animate-none md:mb-20">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-gray-500">
           MAE C163C - Robotics
         </p>

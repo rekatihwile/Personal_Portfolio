@@ -1,4 +1,8 @@
+import { Suspense, lazy } from 'react';
 import LoopingVideos from '../components/LoopingVideos';
+import { usePageTitle } from '../hooks/usePageTitle';
+
+const GroceryBaggerSim = lazy(() => import('../components/bagger-sim/GroceryBaggerSim'));
 
 const media = {
   hero: '/videos/Grocery_Bagger/hero-pick-place-demo.mp4',
@@ -33,9 +37,10 @@ const futureWork = [
 ];
 
 function GroceryBaggerProject() {
+  usePageTitle('Autonomous Grocery Bagging Robot');
   return (
     <div className="project-page mx-auto w-full max-w-6xl px-6 py-14 sm:px-8 lg:px-10">
-      <header className="mx-auto mb-16 max-w-4xl text-center md:mb-20">
+      <header className="mx-auto mb-16 max-w-4xl animate-fade-up text-center motion-reduce:animate-none md:mb-20">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-gray-500">
           Robotics / Mechatronics Capstone
         </p>
@@ -82,6 +87,25 @@ function GroceryBaggerProject() {
             perception calibration and candidate filtering.
           </figcaption>
         </figure>
+      </section>
+
+      <section className="mx-auto mb-16 w-full max-w-5xl md:mb-20">
+        <h2 className="mb-5 text-2xl font-semibold">Interactive 3D Demo</h2>
+        <p className="text-gray-300 leading-relaxed">
+          A simplified digital twin of the bagging cycle: the SCARA-like arm moves over the staging
+          platform, picks each grocery, and packs it into the bag — the same loop
+          shown in the footage, driven here by inverse kinematics on the same RRPR joint
+          layout as the physical robot.
+        </p>
+        <div className="mt-6">
+          <Suspense
+            fallback={
+              <div className="h-[24rem] w-full animate-pulse rounded-xl border border-white/10 bg-[#0f1213] md:h-[28rem]" />
+            }
+          >
+            <GroceryBaggerSim />
+          </Suspense>
+        </div>
       </section>
 
       <section className="mx-auto mb-16 w-full max-w-4xl md:mb-20">

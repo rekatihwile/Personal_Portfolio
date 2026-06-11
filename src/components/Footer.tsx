@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
   return (
     <footer className="mt-16 border-t border-white/10 bg-[#0f1213]">
@@ -8,7 +10,7 @@ export default function Footer() {
             <p className="text-sm">Expected Graduation: June 2026</p>
             <a
               href="mailto:eli.p.p.whitaker@gmail.com"
-              className="text-sm underline decoration-dotted underline-offset-4 hover:text-white"
+              className="text-sm underline decoration-dotted underline-offset-4 transition-colors duration-200 hover:text-white"
             >
               eli.p.p.whitaker@gmail.com
             </a>
@@ -18,7 +20,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/eliwhitaker/"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-white"
+              className="transition-colors duration-200 hover:text-white"
             >
               LinkedIn
             </a>
@@ -26,13 +28,13 @@ export default function Footer() {
               href="https://github.com/rekatihwile"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-white"
+              className="transition-colors duration-200 hover:text-white"
             >
               GitHub
             </a>
-            <a href="Resume.pdf" className="hover:text-white">
+            <Link to="/resume" className="transition-colors duration-200 hover:text-white">
               Resume
-            </a>
+            </Link>
           </div>
         </div>
         <p className="mt-6 text-xs text-gray-500">
