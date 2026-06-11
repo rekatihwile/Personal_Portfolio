@@ -24,22 +24,31 @@ dist-ssr
 *.sw?
 .claude
 
-
-
 # Python junk
 .venv/
 __pycache__/
 *.py[cod]
 
-# Big media — raw footage stays out of the repo…
+# Big media - raw footage stays out of the repo
 *.mp4
 *.MP4
 *.mov
 *.MOV
 *.heic
 *.HEIC
-# …but the encoded web videos that ship with the site are tracked
-!public/videos/**
+
+# Web-safe video allowlist for files that actually ship with the site.
+# Existing tracked files remain tracked, but new raw videos in public/videos/
+# will stay ignored unless they use one of these safe naming patterns.
+!public/videos/
+!public/videos/**/
+public/videos/**/*.mp4
+public/videos/**/*.MP4
+public/videos/**/*.mov
+public/videos/**/*.MOV
+!public/videos/**/*-h264.mp4
+!public/videos/**/*-web.mp4
+!public/videos/**/*-compressed.mp4
 
 # Raw staging media
 portfolio_media_staging/
