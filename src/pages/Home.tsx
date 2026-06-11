@@ -53,7 +53,7 @@ function Home() {
               View Resume
             </Link>
             <a
-              href="mailto:eli.p.p.whitaker@gmail.com"
+              href="/Resume"
               className="rounded-md border border-white/15 px-4 py-2 text-sm font-medium text-gray-200 transition-colors duration-200 hover:bg-white/5 hover:text-white"
             >
               Contact
