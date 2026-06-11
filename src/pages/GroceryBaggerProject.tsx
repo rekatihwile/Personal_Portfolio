@@ -1,8 +1,8 @@
-import { Suspense, lazy } from 'react';
+// import { Suspense, lazy } from 'react';
 import LoopingVideos from '../components/LoopingVideos';
 import { usePageTitle } from '../hooks/usePageTitle';
 
-const GroceryBaggerSim = lazy(() => import('../components/bagger-sim/GroceryBaggerSim'));
+// const GroceryBaggerSim = lazy(() => import('../components/bagger-sim/GroceryBaggerSim'));
 
 const media = {
   hero: '/videos/Grocery_Bagger/hero-pick-place-demo.mp4',
