@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // Named size presets — each maps to a CSS variable in index.css :root.
 // Tune the variables there to resize all videos of that size at once.
@@ -57,6 +57,29 @@ export default function LoopingVideos({
 }: LoopingVideoProps) {
   const [controls, setControls] = useState(false);
   const hasSeekedRef = useRef(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Only download + play once the video scrolls near the viewport, and pause
+  // again when it leaves — keeps pages with several demos from fetching
+  // everything up front.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {
+            /* autoplay rejection is fine */
+          });
+        } else {
+          video.pause();
+        }
+      },
+      { rootMargin: '200px' }
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   const style: React.CSSProperties = {
     width: maxWidth ?? SIZE_VAR[size],
@@ -74,14 +97,14 @@ export default function LoopingVideos({
       onClick={() => setControls(true)}
     >
       <video
+        ref={videoRef}
         src={src}
         poster={poster}
-        autoPlay
         loop
         muted
         playsInline
         controls={controls}
-        preload="metadata"
+        preload="none"
         onLoadedMetadata={(event) => {
           if (startAt <= 0 || hasSeekedRef.current) return;
           const video = event.currentTarget;

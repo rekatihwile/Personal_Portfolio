@@ -1,4 +1,5 @@
 import LoopingVideos from '../components/LoopingVideos';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 const media = {
   hero: '/images/Laser_Weeder/home-hero-preview.jpg',
@@ -32,9 +33,10 @@ const futureWork = [
 ];
 
 function LaserWeeding() {
+  usePageTitle('Laser Weeder Robotic Treatment System');
   return (
     <div className="project-page mx-auto w-full max-w-6xl px-6 py-14 sm:px-8 lg:px-10">
-      <header className="mx-auto mb-16 max-w-4xl text-center md:mb-20">
+      <header className="mx-auto mb-16 max-w-4xl animate-fade-up text-center motion-reduce:animate-none md:mb-20">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-gray-500">
           UCLA Research / Lab Context
         </p>
