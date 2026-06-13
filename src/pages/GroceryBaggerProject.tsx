@@ -149,10 +149,12 @@ function GroceryBaggerProject() {
             className="w-full rounded-xl border border-white/10 bg-[#0f1213] object-contain"
           />
           <figcaption className="mt-3 text-sm leading-relaxed text-gray-400">
-            Perception pipeline for isolating grocery geometry from stereo imagery: stereo-left and
-            stereo-right frames, RAFT-Stereo disparity, YOLO segmentation and classification, and
-            the target mask applied to the disparity map to isolate the depth data used for 3D
-            reconstruction.
+            Perception pipeline for isolating grocery geometry from stereo imagery. (2a) Stereo-left
+            image and (2b) stereo-right image from the side-by-side USB stereo stream. (2c)
+            RAFT-Stereo disparity visualized as a heat map, where closer objects appear hotter and
+            farther objects appear cooler. (2d) YOLO segmentation and classification of the target
+            grocery. (2e) Target mask applied to the disparity map, isolating the depth data used
+            for 3D reconstruction.
           </figcaption>
         </figure>
       </section>
@@ -182,10 +184,11 @@ function GroceryBaggerProject() {
             className="w-full rounded-xl border border-white/10 bg-[#0f1213] object-contain"
           />
           <figcaption className="mt-3 text-sm leading-relaxed text-gray-400">
-            Robot-frame point-cloud reconstruction of a grocery object and the axis-aligned
-            bounding-box abstraction used for placement reasoning. The object height is padded
-            conservatively for vertical clearance while XY spacing is enforced during placement
-            feasibility checks.
+            Robot-frame point-cloud reconstruction of a grocery object. (3a) Masked stereo point
+            cloud for a grocery item after camera-to-robot-frame mapping. (3b) Axis-aligned bounding
+            box used as the compact object representation for placement reasoning. Object height is
+            padded conservatively for vertical clearance, while XY spacing is enforced during
+            placement feasibility checks.
           </figcaption>
         </figure>
       </section>
@@ -198,9 +201,12 @@ function GroceryBaggerProject() {
             className="w-full rounded-xl border border-white/10 bg-[#0f1213] object-contain"
           />
           <figcaption className="mt-3 text-sm leading-relaxed text-gray-400">
-            Deterministic packing visualization for one planning cycle: filtered overhead-camera
-            detections, current internal bag state, and the best feasible placement proposed for
-            each remaining candidate under the deterministic 2.5D heuristic.
+            Deterministic packing visualization for one planning cycle. (a) Overhead-camera
+            detections after platform filtering; visible items outside the staging platform are
+            excluded from pick candidates. (b) Current internal bag state in robot-frame bag
+            coordinates, with the dashed red rectangle marking the conservative usable bag region.
+            (c) Best feasible placement proposed for each remaining platform candidate under the
+            deterministic 2.5D heuristic.
           </figcaption>
         </figure>
       </section>
