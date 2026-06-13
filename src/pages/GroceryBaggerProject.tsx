@@ -57,7 +57,7 @@ function GroceryBaggerProject() {
         <figure className="flex h-full flex-col">
           <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0f1213] lg:h-[22rem]">
             <video
-              src={media.hero}
+              src={media.densePack}
               autoPlay
               loop
               muted
@@ -67,8 +67,8 @@ function GroceryBaggerProject() {
             />
           </div>
           <figcaption className="mt-3 text-sm leading-relaxed text-gray-400">
-            Continuous pick-and-place hero demo showing the grocery bagging system operating over an
-            extended sequence.
+            Dense item packing demo showing the planner prioritizing practical fit and placement
+            constraints rather than a fixed drop location.
           </figcaption>
         </figure>
 
@@ -222,9 +222,9 @@ function GroceryBaggerProject() {
 
         <div className="mx-auto w-full max-w-xl">
           <LoopingVideos
-            src={media.densePack}
+            src={media.hero}
             size="full"
-            text="Dense item packing demo showing the planner prioritizing practical fit and placement constraints rather than a fixed drop location."
+            text="Continuous pick-and-place demo showing the grocery bagging system operating over an extended sequence."
             className="rounded-xl border border-white/10"
           />
         </div>
