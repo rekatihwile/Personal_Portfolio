@@ -320,6 +320,23 @@ function GroceryBaggerProject() {
           </ul>
         </div>
       </section>
+
+      <section className="mx-auto mt-6 w-full max-w-4xl border-t border-white/10 pt-10">
+        <h2 className="mb-4 text-2xl font-semibold">Technical Report</h2>
+        <p className="text-gray-300 leading-relaxed">
+          The full formal write-up covers the complete perception-to-action pipeline, calibration
+          methodology, AABB packing formulation, missed-pick recovery state machine, and aggregate
+          performance data across 64 autonomous logged runs.
+        </p>
+        <a
+          href="/images/Grocery_Bagger/Technical_Report.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-5 inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-5 py-3 text-sm font-medium text-gray-200 transition-colors hover:border-white/40 hover:bg-white/10"
+        >
+          View Technical Report (PDF)
+        </a>
+      </section>
     </div>
   );
 }
