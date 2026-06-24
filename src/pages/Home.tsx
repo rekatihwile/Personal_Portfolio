@@ -60,7 +60,7 @@ function Home() {
             </a>
           </div>
           <img
-            src="/images/Profile_Picture.jpeg"
+            src="/images/ProfilePicLinkedIn.jpg"
             alt="Portrait of Eli Whitaker"
             className="mt-8 h-52 w-52 animate-fade-up rounded-xl border border-white/10 object-cover shadow-[0_18px_60px_rgba(0,0,0,0.35)] [animation-delay:280ms] motion-reduce:animate-none md:h-64 md:w-64"
           />
