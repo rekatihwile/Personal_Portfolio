@@ -9,7 +9,7 @@ function About() {
           About Me
         </p>
         <h1 className="mx-auto max-w-3xl text-4xl font-semibold tracking-tight md:text-5xl">
-          Mechanical engineering, robotics, and real hardware that has to work.
+          Mechanical engineering, robotics, and real work that makes a difference.
         </h1>
         <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-gray-400">
           I like projects where perception, controls, and physical systems all have to cooperate in
