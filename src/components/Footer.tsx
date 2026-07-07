@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 text-gray-300">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row md:items-start">
           <div>
-            <p className="text-sm">UCLA Mechanical Engineering Student</p>
-            <p className="text-sm">Expected Graduation: June 2026</p>
+            <p className="text-sm">UCLA Mechanical Engineering, B.S. 2026</p>
+            <p className="text-sm">Open to full-time opportunities</p>
             <a
               href="mailto:eli.p.p.whitaker@gmail.com"
               className="text-sm underline decoration-dotted underline-offset-4 transition-colors duration-200 hover:text-white"

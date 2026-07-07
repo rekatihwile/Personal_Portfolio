@@ -42,7 +42,7 @@ function Home() {
             Hi, I'm Eli
           </h1>
           <p className="mt-4 max-w-xl animate-fade-up text-balance text-lg leading-relaxed text-gray-300 [animation-delay:120ms] motion-reduce:animate-none">
-            UCLA mechanical engineering student focused on robotics, clean design, and rigorous
+            UCLA mechanical engineering graduate focused on robotics, clean design, and rigorous
             problem-solving.
           </p>
           <div className="mt-6 flex animate-fade-up gap-3 [animation-delay:200ms] motion-reduce:animate-none">

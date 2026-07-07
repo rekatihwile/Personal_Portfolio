@@ -22,20 +22,24 @@ function About() {
           <h2 className="mb-6 text-2xl font-semibold">Background</h2>
           <div className="space-y-5 text-base leading-relaxed text-gray-300">
             <p>
-              I&apos;m entering my{' '}
-              <strong className="text-white">fourth year of Mechanical Engineering at UCLA</strong>{' '}
-              with a <strong className="text-white">4.0 GPA</strong>. I&apos;m part of the{' '}
-              <strong className="text-white">Structures-Computer Interaction (SCI) Lab</strong>{' '}
-              working on a perception-guided{' '}
-              <strong className="text-white">laser weeding project</strong>.
+              I recently graduated from{' '}
+              <strong className="text-white">UCLA with a B.S. in Mechanical Engineering</strong>{' '}
+              and a <strong className="text-white">4.000 GPA</strong>. While at UCLA, I was part of
+              the <strong className="text-white">Structures-Computer Interaction (SCI) Lab</strong>
+              , where I worked on a perception-guided{' '}
+              <strong className="text-white">laser weeding robot</strong>, and I led a
+              capstone team building an{' '}
+              <strong className="text-white">autonomous grocery bagging robot</strong> that
+              combined stereo vision, motion planning, and embedded control on real hardware.
             </p>
 
             <p>
-              I have experience in{' '}
-              <strong className="text-white">MATLAB, Python, C++, and JavaScript</strong>, and
-              I&apos;m interested in careers involving{' '}
+              I have hands-on experience in{' '}
+              <strong className="text-white">MATLAB, Python, C++, and JavaScript</strong>, spanning
+              both research and full-stack robotics builds, from perception and controls to
+              mechanical design and embedded systems integration. I&apos;m now looking for{' '}
               <strong className="text-white">
-                robotics, systems analysis, control design, and diagnostics
+                full-time roles in robotics, systems analysis, control design, and diagnostics
               </strong>
               .
             </p>
@@ -80,7 +84,8 @@ function About() {
                   eli.p.p.whitaker@gmail.com
                 </a>
               </p>
-              <p>Expected Graduation: June 2026</p>
+              <p>UCLA Mechanical Engineering, Class of 2026</p>
+              <p>Open to full-time opportunities</p>
             </div>
           </div>
         </div>
